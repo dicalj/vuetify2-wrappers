@@ -1,0 +1,24 @@
+v-dialog(v-model='display' :width='dialogWidth')
+  template(v-slot:activator='{ on }')
+    v-text-field(v-bind='textFieldProps' :disabled='disabled' :loading='loading' :label='label' :value='formattedDatetime' v-on='on' readonly='')
+      template(v-slot:progress='')
+        slot(name='progress')
+          v-progress-linear(color='primary' indeterminate='' absolute='' height='2')
+  v-card(v-bind='cardProps')
+    v-card-text.px-0.py-0
+      v-tabs(fixed-tabs='' v-model='activeTab')
+        v-tab(key='calendar')
+          slot(name='dateIcon')
+            v-icon {{ dateIcon }}
+        v-tab(key='timer' :disabled='dateSelected')
+          slot(name='timeIcon')
+            v-icon {{ timeIcon }}
+        v-tab-item(key='calendar')
+          v-date-picker(v-model='date' v-bind='datePickerProps' @input='showTimePicker' full-width='')
+        v-tab-item(key='timer')
+          v-time-picker.v-time-picker-custom(ref='timer' v-model='time' v-bind='timePickerProps' full-width='')
+    v-card-actions
+      v-spacer
+      slot(name='actions' :parent='this')
+        v-btn(color='grey lighten-1' text='' @click.native='clearHandler') {{ clearText }}
+        v-btn(color='green darken-1' text='' @click='okHandler') {{ okText }}

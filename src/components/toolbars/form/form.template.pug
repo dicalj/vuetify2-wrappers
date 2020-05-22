@@ -1,0 +1,21 @@
+// toolbar container
+v-toolbar( v-bind='_toolbarProps')
+
+  // toolbar title
+  template( v-if='showTitle' )
+    v-toolbar-title( v-bind='_titleProps' ) {{ title }}
+  v-spacer
+
+  // toolbar items
+  v-toolbar-items
+    slot( name='items' )
+    template( v-if='showMenu' )
+      v-menu( v-bind='_menuProps' )
+        template( slot='activator' slot-scope='{ on: onMenu }' )
+          v-tooltip( bottom )
+            template( slot='activator' slot-scope='{ on: onTooltip }' )
+              v-btn( bottom icon v-on='{ ...onMenu, ...onTooltip }' )
+                v-icon {{ menuIcon }}
+            span Menu
+        v-list( dense )
+          slot( name='options' )

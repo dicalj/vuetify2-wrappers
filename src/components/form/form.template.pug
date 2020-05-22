@@ -1,0 +1,37 @@
+// form container
+v-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
+  v-card( v-bind='_cardProps' )
+    
+    // form toolbar
+    template( v-if='showToolbar' )
+      w-toolbar-form( v-bind='_toolbarProps' )
+        template( slot='items' )
+          v-tooltip( bottom )
+            template( slot='activator' slot-scope='props' )
+              v-btn( icon v-on='props.on' @click='onClickHelp' )
+                v-icon {{ helpIcon }}
+            span Ayuda
+        slot( name='items' slot='items' )
+        slot( name='options' slot='options' )
+    
+    // form content
+    v-card-text( v-bind='textProps' )
+      w-fieldset( v-bind='fieldsetProps' v-model='_value' )
+        template( :slot='notch' slot-scope='props' v-for='notch in notches' )
+          slot( :name='notch' v-bind='props' )
+        template( slot='append' )
+          slot( name='append' )
+    
+    // form actions
+    template( v-if='showActions' )
+      v-card-actions( v-bind='_actionsProps' )
+        template( v-if='showReset' )
+          v-btn( v-bind='_resetButtonProps' @click='onClickReset' ) {{ resetText }}
+        template( v-if='showSubmit' )
+          v-btn( v-bind='_submitButtonProps' @click='onClickSubmit' ) {{ submitText }}
+  
+  // form dialog
+  //v-dialog( v-model='dialogs.about' )
+    v-card
+      v-card-title ola
+      v-card-text ola
