@@ -146,6 +146,35 @@ export default {
               persistentHint: true,
               placeholder: 'rating',
             }
+          },          
+          {
+            html: 'Pickers',
+            type: 'subheader',
+            flex: {
+              cols: 12,
+            },
+            props: {
+              class: 'px-0 subtitle-2',
+              dark: false,           
+              inset: false,           
+              light: true,           
+            },
+          },
+          {
+            name: 'datetime',
+            type: 'date-time-field',
+            prop: {
+              fieldProps: {
+                label: 'date-time-field',
+              },
+              datePickerProps: {
+                locale: 'es',
+              },
+              timePickerProps: {
+                format: '24hr',
+                locale: 'es',
+              },
+            },
           },
           {
             html: 'Models',
@@ -159,8 +188,7 @@ export default {
               inset: false,           
               light: true,           
             },
-          },
-          
+          },          
           {
             html: 'Customs',
             type: 'subheader',

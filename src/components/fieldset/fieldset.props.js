@@ -2,7 +2,17 @@
 export default {
 
   /**
-   * 
+   * The container properties.
+   */
+  containerProps: {
+    type: Object,
+    default: () => ({
+      fluid: true,
+    })
+  },
+
+  /**
+   * The fieldset properties.
    */
   fieldsetProps: {
     type: Object,
@@ -14,7 +24,7 @@ export default {
   },
 
   /**
-   * 
+   * The flex properties.
    */
   flex: {
     type: Object,
@@ -27,7 +37,7 @@ export default {
   },
 
   /**
-   * 
+   * The fieldset items.
    */
   items: {
     type: Array,
@@ -35,7 +45,7 @@ export default {
   },
 
   /**
-   * 
+   * The row properties.
    */
   rowProps: {
     type: Object,
@@ -45,7 +55,7 @@ export default {
   },
 
   /**
-   * 
+   * The fieldset value.
    */
   value: {
     type: Object,

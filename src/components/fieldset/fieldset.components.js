@@ -8,7 +8,7 @@ import { VToolbarTitle } from 'vuetify/lib'
 // import { VComboboxModel } from './models'
 
 //
-// import VDatetimeField from './fields/DatetimeField'
+import VDateTimeField from '../fields/datetime'
 // import VIconField from './fields/IconField'
 // import VPasswordField from './fields/PasswordField'
 // import VRutField from './fields/RutField'
@@ -27,7 +27,7 @@ export default {
   VCheckbox,
   VCombobox,
   //VComboboxModel,
-  //VDatetimeField,
+  VDateTimeField,
   //VDataTableField,
   //VEditor,
   VFileInput,

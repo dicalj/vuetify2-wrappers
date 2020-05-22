@@ -1,16 +1,24 @@
 // fieldset container
 fieldset( v-bind='fieldsetProps' )
-  v-container( fluid )
-      v-row( v-bind='rowProps' )
-        template( v-for='item in items' )
-          v-col( v-bind='item.flex || flex' )
-            component( 
-              :is='item | type' 
-              v-bind='item.props' 
-              v-bind:value='getValue(item.name)' 
-              v-on:input='setValue(item.name, $event)'
-              ) {{ item.html }}
-              template( :slot='key' slot-scope='props' v-for='(name, key) in item.slots' )
-                slot( :name='name' v-bind='props' )
-      v-row( v-bind='rowProps' )
-        slot( name='append' )
+  v-container( v-bind='containerProps' )
+
+    // fieldset fields
+    v-row( v-bind='rowProps' )
+      template( v-for='element in elements' )
+        v-col( v-bind='element.flex' )
+
+          // fieldset field
+          component( 
+            :is='element | type' 
+            v-bind='element.prop' 
+            v-bind:value='getValue(element.name)' 
+            v-on:input='setValue(element.name, $event)'
+            ) {{ element.html }}
+
+            // fieldset field slots
+            template( :slot='key' slot-scope='props' v-for='(name, key) in element.slots' )
+              slot( :name='name' v-bind='props' )
+
+    // fieldset append            
+    v-row( v-bind='rowProps' )
+      slot( name='append' )

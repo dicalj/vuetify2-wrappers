@@ -1,24 +1,39 @@
-v-dialog(v-model='display' :width='dialogWidth')
-  template(v-slot:activator='{ on }')
-    v-text-field(v-bind='textFieldProps' :disabled='disabled' :loading='loading' :label='label' :value='formattedDatetime' v-on='on' readonly='')
-      template(v-slot:progress='')
-        slot(name='progress')
-          v-progress-linear(color='primary' indeterminate='' absolute='' height='2')
-  v-card(v-bind='cardProps')
-    v-card-text.px-0.py-0
-      v-tabs(fixed-tabs='' v-model='activeTab')
-        v-tab(key='calendar')
-          slot(name='dateIcon')
-            v-icon {{ dateIcon }}
-        v-tab(key='timer' :disabled='dateSelected')
-          slot(name='timeIcon')
-            v-icon {{ timeIcon }}
+// datetime container
+v-dialog( v-bind='dialogProps' v-model='dialog' )
+
+  // datetime field
+  template( slot='activator' slot-scope='props' )
+    v-text-field( readonly v-bind='fieldProps' v-model='datetime' v-on='props.on' )
+
+  // datetime picker          
+  v-card( tile v-bind='cardProps' )
+    v-card-text( v-bind='textProps' )
+      v-tabs( fixed-tabs v-model='tab' )
+
+        // datetime picker tab headers
+        v-tab( key='calendar' )
+          v-icon {{ dateIcon }}
+        v-tab( :disabled='timer' key='timer' )
+          v-icon {{ timeIcon }}
+
+        // datetime picker tab items
         v-tab-item(key='calendar')
-          v-date-picker(v-model='date' v-bind='datePickerProps' @input='showTimePicker' full-width='')
+          v-date-picker( 
+            class='border-radius-0 elevation-0' 
+            full-width 
+            v-bind='datePickerProps' 
+            v-model='date' 
+            @input='onInputDate' 
+            )
         v-tab-item(key='timer')
-          v-time-picker.v-time-picker-custom(ref='timer' v-model='time' v-bind='timePickerProps' full-width='')
-    v-card-actions
-      v-spacer
-      slot(name='actions' :parent='this')
-        v-btn(color='grey lighten-1' text='' @click.native='clearHandler') {{ clearText }}
-        v-btn(color='green darken-1' text='' @click='okHandler') {{ okText }}
+          v-time-picker( 
+            class='border-radius-0 elevation-0' 
+            full-width 
+            v-bind='timePickerProps' 
+            v-model='time' 
+            )
+
+    // datetime picker actions        
+    v-card-actions( class='justify-end' )
+      v-btn( v-bind='_resetProps' @click='onClickReset') {{ clearText }}
+      v-btn( v-bind='_submitProps' @click='onClickSubmit') {{ okText }}
