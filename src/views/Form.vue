@@ -62,6 +62,26 @@ export default {
             }
           },
           {
+            name: 'nested.password',
+            type: 'password-field',
+            props: {
+              hint: 'password-hint-text',
+              label: 'password-field',
+              persistentHint: true,
+              placeholder: 'password-field',
+            }
+          },
+          {
+            name: 'nested.rut',
+            type: 'rut-field',
+            props: {
+              hint: 'rut-hint-text',
+              label: 'rut-field',
+              persistentHint: true,
+              placeholder: 'rut-field',
+            }
+          },
+          {
             html: 'Selects',
             type: 'subheader',
             flex: {
@@ -177,6 +197,19 @@ export default {
             },
           },
           {
+            name: 'time',
+            type: 'time-field',
+            prop: {
+              fieldProps: {
+                label: 'time-field',
+              },
+              pickerProps: {
+                format: '24hr',
+                locale: 'es',
+              },
+            },
+          },
+          {
             html: 'Models',
             type: 'subheader',
             flex: {
@@ -210,7 +243,9 @@ export default {
     return {
       wFormModel:{
         nested: {
-          text: 'text-field-nested'
+          password: 'password-field-nested',
+          text: 'text-field-nested',
+          rut: 179790106,
         },
         text: 'text-field',
         autocomplete: 'autocomplete-field',
@@ -218,6 +253,9 @@ export default {
         select: 'select-field',
         flag: true,
         rating: 0,
+        date: '2020-05-05',
+        datetime: '2020-05-05 12:00',
+        time: '12:00',
       }
     }
   },

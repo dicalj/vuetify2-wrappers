@@ -7,12 +7,12 @@ import { VToolbarTitle } from 'vuetify/lib'
 //
 // import { VComboboxModel } from './models'
 
-//
+// custom fields
 import VDateTimeField from '../fields/datetime'
 // import VIconField from './fields/IconField'
-// import VPasswordField from './fields/PasswordField'
-// import VRutField from './fields/RutField'
-// import VTimeField from './fields/TimeField'
+import VPasswordField from '../fields/password'
+import VRutField from '../fields/rut'
+import VTimeField from '../fields/time'
 // import VSelectModel from './selects/SelectModel'
 // import VDataTableField from './table/field'
 
@@ -32,14 +32,14 @@ export default {
   //VEditor,
   VFileInput,
   //VIconField,
-  //VPasswordField,
+  VPasswordField,
   VRating,
-  //VRutField,
+  VRutField,
   VSelect,
   //VSelectModel,
   VTextarea,
   VTextField,
-  //VTimeField,
+  VTimeField,
   VToolbarTitle,
   VSubheader,
   VSwitch,

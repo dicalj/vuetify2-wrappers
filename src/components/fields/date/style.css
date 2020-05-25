@@ -1,0 +1,9 @@
+.date-field .v-input__prepend-outer {
+  margin: 0;
+}
+.date-field.v-text-field--outline .v-btn.v-btn--flat.v-btn--icon {
+  margin-top: -8px;
+}
+.date-field.v-text-field--solo .v-btn.v-btn--flat.v-btn--icon {
+  margin-bottom: 6px;
+}

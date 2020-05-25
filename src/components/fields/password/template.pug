@@ -1,0 +1,20 @@
+v-text-field(
+  :rules='_rules'
+  :type='_type'
+  v-bind='_field' 
+  v-model='_value' 
+  )
+  template( slot='append' )
+    v-btn(
+      class='password-field--display'
+      icon
+      small
+      tabindex='-1'
+      v-bind='_button'
+      v-model='show' 
+      @click='show ^= 1' 
+      )
+      v-icon( small ) {{ showIcon }}
+  slot( name='append-outer' slot='append-outer' )
+  slot( name='prepend' slot='prepend' )
+  slot( name='prepend-inner' slot='prepend-inner' )

@@ -1,0 +1,7 @@
+v-text-field( :rules="rules" v-bind="$attrs" v-model="_value" @keydown="handleDot" )
+  template( slot='append' )
+    slot( name='append' )
+  template( slot='append-outer' )
+    slot( name='append-outer' )
+  slot( name='prepend' slot='prepend' )
+  slot( name='prepend-inner' slot='prepend-inner' )
