@@ -236,6 +236,36 @@ export default {
             },
           },
           {
+            name: 'autocomplete',
+            type: 'autocomplete-model',
+            props: {
+              hint: 'autocomplete',
+              label: 'autocomplete',
+              persistentHint: true,
+              placeholder: 'autocomplete',   
+            },
+          },
+          {
+            name: 'combobox',
+            type: 'combobox-model',
+            props: {
+              hint: 'combobox',
+              label: 'combobox',
+              persistentHint: true,
+              placeholder: 'combobox',   
+            },
+          },
+          {
+            name: 'select',
+            type: 'select-model',
+            props: {
+              hint: 'select',
+              label: 'select',
+              persistentHint: true,
+              placeholder: 'select',   
+            },
+          },
+          {
             html: 'Customs',
             type: 'subheader',
             flex: {
