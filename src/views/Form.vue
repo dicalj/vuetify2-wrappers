@@ -197,6 +197,19 @@ export default {
             },
           },
           {
+            name: 'date',
+            type: 'date-field',
+            prop: {
+              fieldProps: {
+                label: 'date-field',
+              },
+              pickerProps: {
+                format: '24hr',
+                locale: 'es',
+              },
+            },
+          },
+          {
             name: 'time',
             type: 'time-field',
             prop: {
@@ -221,7 +234,7 @@ export default {
               inset: false,           
               light: true,           
             },
-          },          
+          },
           {
             html: 'Customs',
             type: 'subheader',
@@ -233,6 +246,26 @@ export default {
               dark: false,           
               inset: false,           
               light: true,           
+            },
+          },
+          {
+            name: 'currency',
+            type: 'currency-field',
+            props: {
+              hint: 'currency',
+              label: 'currency',
+              persistentHint: true,
+              placeholder: 'currency',   
+            },
+          },
+          {
+            name: 'float',
+            type: 'float-field',
+            props: {
+              hint: 'float',
+              label: 'float',
+              persistentHint: true,
+              placeholder: 'float',   
             },
           },
         ]
@@ -256,6 +289,8 @@ export default {
         date: '2020-05-05',
         datetime: '2020-05-05 12:00',
         time: '12:00',
+        currency: 100.50,
+        float: 100.50,
       }
     }
   },

@@ -8,13 +8,14 @@ import { VToolbarTitle } from 'vuetify/lib'
 // import { VComboboxModel } from './models'
 
 // custom fields
+import VAutocompleteModel from '../fields/autocomplete-model'
+import VCurrencyField from '../fields/currency'
+import VDateField from '../fields/date'
 import VDateTimeField from '../fields/datetime'
-// import VIconField from './fields/IconField'
+import VFloatField from '../fields/float'
 import VPasswordField from '../fields/password'
 import VRutField from '../fields/rut'
 import VTimeField from '../fields/time'
-// import VSelectModel from './selects/SelectModel'
-// import VDataTableField from './table/field'
 
 //vue2-editor
 // import { VueEditor as VEditor } from "vue2-editor"
@@ -23,14 +24,16 @@ import VTimeField from '../fields/time'
 export default {
   VAlert,
   VAutocomplete,
-  VDataTable,
+  VAutocompleteModel,
   VCheckbox,
   VCombobox,
-  //VComboboxModel,
+  VCurrencyField,
+  VDataTable,
+  VDateField,
   VDateTimeField,
-  //VDataTableField,
   //VEditor,
   VFileInput,
+  VFloatField,
   //VIconField,
   VPasswordField,
   VRating,

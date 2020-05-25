@@ -1,3 +1,6 @@
-div:not(.data-table-model) > .currency-field .v-text-field__suffix {
-  padding: 4px 0 0 4px !important;
+.crud-form-fieldset .v-autocomplete input {
+  padding-bottom: 4px;
+}
+.prepend-40 .v-input__prepend-inner {
+  width: 40%;
 }

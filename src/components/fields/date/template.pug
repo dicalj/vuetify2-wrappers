@@ -13,8 +13,8 @@ v-text-field.date-field(
   template( slot="append" )
     v-tooltip( bottom )
       template( slot="activator" )
-        v-btn( :color="isReadonly ? 'default' : 'primary'" icon flat @click="modal = true" )
-          v-icon today
+        v-btn( :color="isReadonly ? 'default' : 'primary'" small icon flat @click="modal = true" )
+          v-icon( small ) mdi-clock-outline
       span {{ this.isReadonly ? "Ver calendario" : "Seleccionar fecha" }}
   slot( name="prepend" slot="prepend" )
     v-dialog( v-model="modal" :width="290" )

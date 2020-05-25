@@ -1,5 +1,11 @@
-v-text-field.currency-field( :rules="_rules" v-bind="toProps" v-model="_value" @keydown="handleDot" )
-  slot( name='append' slot='append' )
-  slot( name='append-outer' slot='append-outer' )
+v-autocomplete( 
+  ref='autocomplete' 
+  :rules='_rules'
+  :search-input.sync='search' 
+  single-line 
+  v-bind='autocompleteProps' 
+  v-model='selected'
+  @keyup='fetchByKeyUp'
+  )
   slot( name='prepend' slot='prepend' )
   slot( name='prepend-inner' slot='prepend-inner' )
