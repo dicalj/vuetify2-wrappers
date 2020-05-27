@@ -1,29 +1,23 @@
 # vuetify2-wrappers
 
-## Project setup
-```
-yarn install
+This is an helper lib with default vuetify components.
+
+## Install
+
+```bash
+yarn add https://github.com/dicalj/vuetify2-wrappers.git
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+## Usage
+
+Define
+```javascript
 ```
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+Use
+```javascript
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## License
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+MIT © dicaljs
