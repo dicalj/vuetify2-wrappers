@@ -59,7 +59,7 @@
               text: 'text',
             },
           ],
-          fetch: () => ({
+          service: () => ({
             data: [
               {
                 text: 'text',

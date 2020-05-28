@@ -12,8 +12,8 @@ export default {
    * { item_description }
    */
   fetch() {
-    return Promiseresolve(this.params).then(this.mapParams).then(this.service)
-  }
+    return Promise.resolve(this.params).then(this.mapParams).then(this.service)
+  },
 
   /**
    * 
