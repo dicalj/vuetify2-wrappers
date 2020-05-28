@@ -1,0 +1,10 @@
+v-tooltip( content-class='caption font-weight-medium px-2 py-1' v-bind='tooltipProps' )
+  template( slot='activator' slot-scope='props' )
+    v-btn( 
+      v-bind='buttonProps'
+      v-model='value'
+      v-on='props.on' 
+      @click='$emit("click"); $emit("input", !value)'
+    )
+      slot
+  span( style='white-space: pre-line;' ) {{ tip }}

@@ -1,0 +1,45 @@
+// table container
+v-data-table( 
+  :options.sync='options' 
+  v-bind='tableProps' 
+  v-model='selected' 
+  @item-selected='onSelectItem'
+  @toggle-select-all='onSelectAll'
+  @update:options='onUpdateOptions' 
+  )
+
+  // table top slot
+  template( slot='top' )
+    vw-toolbar-table( v-bind='toolbarProps' v-if='showToolbar' )
+
+      // table toolbar search
+      template( slot='search' )
+        vw-search-field( v-model='search' @click-remove='onResetSearch' @click-search='onSubmitSearch' )
+
+      // table toolbar items
+      template( slot='toolbar-items' )
+        slot( name='toolbar-items' )
+        vw-btn( v-bind='filterButtonProps' @click='onClickFilter' )
+          v-badge( color='accent' dot v-model='filterDataLength' )
+            v-icon mdi-filter
+        vw-btn( v-bind='refreshButtonProps' @click='onClickRefresh' )
+          v-icon mdi-refresh
+
+      // toolbar toolbar menu items
+      template( slot='menu-items' )
+        slot( name='toolbar-menu-items' )
+
+    // table filter
+    template( v-if='filter.show' )
+      vw-form( v-bind='filterFormProps' v-model='filter.data' @click-reset='onResetFilter' @click-submit='onSubmitFilter' )
+
+  // actions
+  template( slot='item.actions' slot-scope='props' )
+    slot( name='actions' v-bind='props' )
+
+  // table
+  template( :slot='`item.${header.value}`' slot-scope='props' v-for='header in headersToCustom' )
+    template( v-if='header.component' )
+      component( :is='header.component' v-bind='header.props' v-model='props.item[props.header.value]' ) {{ props.item.value }}
+    template( v-if='header.format' )
+      span( v-text='header.format(props.value)' )

@@ -1,8 +1,11 @@
 // components
 import VwForm from './src/components/form'
+import VwTable from './src/components/table'
 
 // layouts
 import VwLayoutCenter from './src/components/layouts/center'
+// import VwLayoutDashboard from './src/components/layouts/dashboard'
+//import VwLayoutInbox from './src/components/layouts/inbox'
 
 // plugin
 export default {
@@ -11,6 +14,7 @@ export default {
       components: {
         VwForm,
         VwLayoutCenter,
+        VwTable,
       },
     })
   }

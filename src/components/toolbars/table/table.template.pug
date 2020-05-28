@@ -1,0 +1,18 @@
+// toolbar container
+v-toolbar( v-bind='toolbarProps' )
+  slot( name='search' )
+  v-spacer
+
+  // toolbar items
+  v-toolbar-items
+    slot( name='toolbar-items' )
+
+    // toolbar menu
+    v-menu( v-bind='menuProps' v-if='!noMenu' )
+      template( v-slot:activator='{ on }' )
+        v-btn( v-bind='menuButtonProps' v-model='menues' v-on='on' )
+          v-icon mdi-dots-vertical
+      v-list( dense )
+        v-list-item( @click='$emit(exportEmit)' )
+          v-list-item-title {{ exportText }}
+        slot( name='menu-items' )

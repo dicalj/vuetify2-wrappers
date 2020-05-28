@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 
 //
 import FormView from '@/views/Form'
+import TableView from '@/views/Table'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,11 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/table',
+    name: 'table',
+    component: TableView
   },
 ]
 

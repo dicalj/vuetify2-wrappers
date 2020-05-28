@@ -1,0 +1,11 @@
+v-text-field( v-bind='fieldProps' v-model='_value'  @keyup.enter='submitSearch'  )
+  template( slot='append' )
+    template( v-if='closeShow' )
+      vw-btn( v-bind='closeProps' @click='submitRemove' @click.passive='submitSearch' )
+        v-icon( v-bind='closeIconProps' ) {{ closeIcon }}
+    vw-btn(
+      :disabled='searchDisabled'
+      v-bind='searchProps' 
+      @click='submitSearch' 
+      )
+      v-icon( v-bind='searchIconProps' ) mdi-magnify
