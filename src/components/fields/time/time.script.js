@@ -40,7 +40,10 @@ export default {
      */
     selectButtonProps() {
       return {
-        color: this.readonly ? '' : 'primary'
+        color: this.readonly ? '' : 'primary',
+        style: {
+          marginTop: '-2px',
+        }
       }
     },
   },
