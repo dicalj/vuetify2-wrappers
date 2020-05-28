@@ -25,7 +25,7 @@ export default {
      * 
      */
     readonly() {
-      return this?.pickerProps?.readonly
+      return this.pickerProps && this.pickerProps.readonly
     },
 
     /**
