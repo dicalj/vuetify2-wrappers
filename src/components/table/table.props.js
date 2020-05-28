@@ -2,17 +2,6 @@
 export default {
 
   /**
-   * The fetch function.
-   */
-  fetch: {
-    type: Function,
-    default: () => ({
-      data: [],
-      length: 0,
-    })
-  },
-
-  /**
    * The filters array.
    */
   filters: {
@@ -90,5 +79,16 @@ export default {
   noToolbar: {
     type: Boolean,
     default: false,
+  },
+
+  /**
+   * The service function.
+   */
+  service: {
+    type: Function,
+    default: () => ({
+      data: [],
+      length: 0,
+    })
   },
 }

@@ -9,6 +9,13 @@ export default {
   },
 
   /**
+   * { item_description }
+   */
+  fetch() {
+    return Promiseresolve(this.params).then(this.mapParams).then(this.service)
+  }
+
+  /**
    * 
    */
   filterByCustom(header) {
@@ -69,13 +76,18 @@ export default {
       Promise
         .resolve(true)
         .then(this.setBusy)
-        .then(this.getParams)
         .then(this.fetch)
-        .then(this.mapItems)
-        .then(this.setItems)
+        .then(this.setter)
         .catch(this.setError)
         .then(this.setBusy)
     }
+  },
+
+  /**
+   * { item_description }
+   */
+  setter(res) {
+    return Promise.resolve(res).then(this.mapItems).then(this.setItems)
   },
 
   /**
