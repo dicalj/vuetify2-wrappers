@@ -14,8 +14,8 @@ v-text-field( readonly ref='field' v-bind='fieldProps' v-model='_value' )
     v-dialog( v-model='modal' v-bind='dialogProps' )
       v-time-picker( v-bind='pickerProps' v-model='_value' )
         v-spacer
-        v-btn( text @click='date=""' ) limpiar
-        v-btn( color='primary' text @click='modal=false' ) aceptar
+        v-btn( text @click='onClickCancelButton' ) {{ cancelText }}
+        v-btn( color='primary' text @click='onClickAcceptButton' ) {{ acceptText }}
 
   // time slots      
   slot( name="prepend-inner" slot="prepend-inner" )

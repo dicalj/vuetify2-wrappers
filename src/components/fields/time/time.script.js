@@ -52,6 +52,22 @@ export default {
   props: {
 
     /**
+     * 
+     */
+    acceptText: {
+      type: String,
+      default: 'aceptar',
+    },
+
+    /**
+     * 
+     */
+    cancelText: {
+      type: String,
+      default: 'cancelar',
+    },
+
+    /**
      *
      */
     dialogProps: {
@@ -118,6 +134,20 @@ export default {
     },
   },
   methods: {
+
+    /**
+     * 
+     */
+    onClickAcceptButton() {
+      this.modal = false
+    },
+
+    /**
+     * 
+     */
+    onClickCancelButton() {
+      this.modal = false
+    },
 
     /**
      * 
