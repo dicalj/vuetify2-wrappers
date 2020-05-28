@@ -81,6 +81,7 @@ export default {
    */
   _toolbarProps() {
     return { 
+      noMenu: this.noMenu,
       title: this.title,
       titleProps: {
         ...this.titleProps,
