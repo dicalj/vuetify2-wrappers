@@ -112,7 +112,10 @@ export default {
     /**
      *
      */
-    value: String,
+    value: {
+      type: String,
+      default: '',
+    },
   },
   methods: {
 
