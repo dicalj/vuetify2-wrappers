@@ -1,3 +1,3 @@
-<template lang='pug' src='./template.pug'/>
-<script src='./script.js'/>
-<style src='./style.css'/>
+<template lang='pug' src='./time.template.pug'/>
+<script src='./time.script.js'/>
+<style src='./time.style.css'/>
