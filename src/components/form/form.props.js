@@ -22,6 +22,14 @@ export default {
   },
 
   /**
+   *
+   */
+  cardProps: {
+    type: Object,
+    default: () => ({}),
+  },
+
+  /**
    * { item_description }
    */
   contentClass: String,
@@ -56,6 +64,14 @@ export default {
   items: {
     type: Array,
     default: () => [],
+  },
+
+  /**
+   * 
+   */
+  loadingColor: {
+    type: String,
+    default: 'primary',
   },
 
   /**

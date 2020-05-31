@@ -28,8 +28,9 @@ export default {
    */
   _cardProps() {
     return {
+      ...this.cardProps,
       class   : this.contentClass,
-      loading : this.loading,
+      loading : this.loading ? this.loadingColor : false,
     }
   },
 
