@@ -9,6 +9,17 @@ export default {
   },
 
   /**
+   * 
+   * @param {*} event 
+   */
+  mapHelp(item) {
+    return {
+      title: item.prop ? item.prop.label : item.props ? item.props.label : '',
+      description: item.info,
+    }
+  },
+
+  /**
    * Prevent the default event.
    * @param   {Object}  The event.
    */

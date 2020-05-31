@@ -105,6 +105,13 @@ export default {
   },
 
   /**
+   * 
+   */
+  helps() {
+    return this.items.map(this.mapHelp)
+  },
+
+  /**
    * { function_description }
    * @return     {<type>}  { description_of_the_return_value }
    */

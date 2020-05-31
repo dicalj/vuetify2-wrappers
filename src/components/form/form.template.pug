@@ -36,6 +36,6 @@ v-form.vw-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
       v-card-title {{ dialogCardTitle }}
       v-card-subtitle {{ dialogCardSubtitle }}
       v-card-text 
-        template( v-for='helpItem in helpItems' )
-          h3.body--1 {{ helpItem.title }}
-          p.body-2 {{ helpItem.description }}
+        template( v-for='help in helps' )
+          h3.body--1 {{ help.title }}
+          p.body-2 {{ help.description }}
