@@ -62,19 +62,36 @@ export default {
    * { item_description }
    */
   noActions: Boolean,
+
+  /**
+   * 
+   */
   noMenu: Boolean,
 
+  /**
+   * 
+   */
   noReset: {
     type: Boolean,
     default: false,
   },
 
+  /**
+   * 
+   */
   noSubmit: {
     type: Boolean,
     default: false,
   },
 
+  /**
+   * 
+   */
   noSwitch: Boolean,
+
+  /**
+   * 
+   */
   noToolbar: Boolean,
 
   /**
