@@ -62,7 +62,7 @@ export default {
    * 
    */
   submit() {
-    this.$emit('click-submit', this.value)
+    this.$emit('click-submit', this._value)
   },
 
   /**
