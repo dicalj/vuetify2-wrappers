@@ -17,6 +17,13 @@ export default {
   },
 
   /**
+   * 
+   */
+  onClickHelp() {
+    this.dialogs.help = true
+  },
+
+  /**
    * Handle reset form.
    */
   onClickReset() {

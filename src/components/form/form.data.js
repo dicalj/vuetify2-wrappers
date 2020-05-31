@@ -2,7 +2,7 @@
 export default function data() {
   return {
     dialogs: {
-      about: false,
+      help: false,
     },
     loading: false,
   }

@@ -35,6 +35,40 @@ export default {
   contentClass: String,
 
   /**
+   *
+   */
+  dialogCardProps: {
+    type: Object,
+    default: () => ({}),
+  },
+
+  /**
+   * { item_description }
+   */
+  dialogCardTitle: {
+    type: String,
+    default: 'Titulo',
+  },
+
+  /**
+   * { item_description }
+   */
+  dialogCardSubtitle: {
+    type: String,
+    default: 'Subtitulo',
+  },
+
+  /**
+   *
+   */
+  dialogProps: {
+    type: Object,
+    default: () => ({
+      width: 650,
+    }),
+  },
+
+  /**
    * { item_description }
    */
   editable: {
@@ -56,6 +90,19 @@ export default {
   helpIcon: {
     type: String,
     default: 'mdi-information',
+  },
+
+  /**
+   * 
+   */
+  helpItems: {
+    type: Array,
+    default: () => [
+      {
+        title: 'Titulo',
+        description: 'Descripción',
+      }
+    ],
   },
 
   /**

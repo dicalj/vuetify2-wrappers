@@ -31,7 +31,11 @@ v-form.vw-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
           v-btn( v-bind='_submitButtonProps' @click='onClickSubmit' ) {{ submitText }}
   
   // form dialog
-  //v-dialog( v-model='dialogs.about' )
-    v-card
-      v-card-title ola
-      v-card-text ola
+  v-dialog( v-bind='dialogProps' v-model='dialogs.help' )
+    v-card( v-bind='dialogCardProps' )
+      v-card-title {{ dialogCardTitle }}
+      v-card-subtitle {{ dialogCardSubtitle }}
+      v-card-text 
+        template( v-for='helpItem in helpItems' )
+          h3.body--1 {{ helpItem.title }}
+          p.body-2 {{ helpItem.description }}
