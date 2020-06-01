@@ -1,4 +1,5 @@
 // components
+import VwBtn from './src/components/button/button'
 import VwForm from './src/components/form'
 import VwTable from './src/components/table'
 
@@ -12,6 +13,7 @@ export default {
   install: function (Vue, options) {
     Vue.mixin({
       components: {
+        VwBtn,
         VwForm,
         VwLayoutCenter,
         VwTable,
