@@ -1,5 +1,5 @@
 // components
-import VwBtn from './src/components/button/button'
+import VwBtn from './src/components/buttons/button'
 import VwForm from './src/components/form'
 import VwTable from './src/components/table'
 
