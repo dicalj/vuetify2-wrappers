@@ -167,7 +167,7 @@ export default {
    * Called when updated the options of table.
    */
   onUpdateOptions() {
-
+    this.refresh()
   },
 
   /**
