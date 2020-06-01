@@ -72,6 +72,10 @@ export default {
    * { function_description }
    */
   refresh() {
+    console.log({
+      busy: this.busy,
+      params: this.params,
+    })
     if (!this.busy) {
       Promise
         .resolve(true)
