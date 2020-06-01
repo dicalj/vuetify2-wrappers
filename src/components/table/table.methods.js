@@ -77,9 +77,10 @@ export default {
       params: this.params,
     })
     if (!this.busy) {
+      this.busy = true;
       Promise
         .resolve(true)
-        .then(this.setBusy)
+        // .then(this.setBusy)
         .then(this.fetch)
         .then(this.setter)
         .catch(this.setError)
