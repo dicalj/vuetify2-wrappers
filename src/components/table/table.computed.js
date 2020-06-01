@@ -26,7 +26,7 @@ export default {
   _filterProps() {
     return {
       ...this.filterProps,
-      // items     : this.filters,
+      items     : this.filters,
       noHelp    : true,
       noMenu    : true,
       submitText: 'filtrar',
