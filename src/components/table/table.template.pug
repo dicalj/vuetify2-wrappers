@@ -31,7 +31,7 @@ v-data-table.vw-table(
 
     // table filter
     template( v-if='filter.show' )
-      vw-form( v-bind='filterFormProps' v-model='filter.data' @click-reset='onResetFilter' @click-submit='onSubmitFilter' )
+      vw-form( v-bind='_filterProps' v-model='filter.data' @click-reset='onResetFilter' @click-submit='onSubmitFilter' )
 
   // actions
   template( slot='item.actions' slot-scope='props' )

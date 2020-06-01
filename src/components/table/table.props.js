@@ -10,6 +10,14 @@ export default {
   },
 
   /**
+   * The filter props.
+   */
+  filterProps: {
+    type: Object,
+    default: () => ({}),
+  },
+
+  /**
    * The headers array.
    */
   headers: {

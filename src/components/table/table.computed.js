@@ -23,8 +23,9 @@ export default {
   /**
    * 
    */
-  filterFormProps() {
-    return {      
+  _filterProps() {
+    return {
+      ...this.filterProps,
       items     : this.filters,    
       noItemText: 'Sin filtros.',
       noMenu    : true,
