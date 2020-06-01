@@ -26,8 +26,8 @@ export default {
   _filterProps() {
     return {
       ...this.filterProps,
-      items     : this.filters,    
-      noItemText: 'Sin filtros.',
+      // items     : this.filters,
+      noHelp    : true,
       noMenu    : true,
       submitText: 'filtrar',
       textProps : { class: 'px-4 py-0' },
