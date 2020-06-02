@@ -9,6 +9,7 @@ import { VToolbarTitle } from 'vuetify/lib'
 
 // custom fields
 import VAutocompleteModel from '../fields/autocomplete-model'
+import VComboboxModel from '../fields/combobox-model'
 import VCurrencyField from '../fields/currency'
 import VDateField from '../fields/date'
 import VDateTimeField from '../fields/datetime'
@@ -28,6 +29,7 @@ export default {
   VAutocompleteModel,
   VCheckbox,
   VCombobox,
+  VComboboxModel,
   VCurrencyField,
   VDataTable,
   VDateField,
