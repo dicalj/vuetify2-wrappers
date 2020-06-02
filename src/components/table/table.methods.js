@@ -9,7 +9,9 @@ export default {
   },
 
   /**
-   * { item_description }
+   * Get the items from a service function provided by props.
+   * 
+   * @return {Promise} the fetch service.
    */
   fetch() {
     return Promise.resolve(this.params).then(this.mapParams).then(this.service)
@@ -33,7 +35,7 @@ export default {
   },
 
   /**
-   * Get the mapped params selecteds.
+   * Get the mapped params selected.
    * 
    * @return {Promise} the params
    */
@@ -72,19 +74,9 @@ export default {
    * { function_description }
    */
   refresh() {
-    console.log({
-      busy: this.busy,
-      params: this.params,
-    })
     if (!this.busy) {
       this.busy = true;
-      Promise
-        .resolve(true)
-        // .then(this.setBusy)
-        .then(this.fetch)
-        .then(this.setter)
-        .catch(this.setError)
-        .then(this.setBusy)
+      this.fetch().then(this.setter).catch(this.setError).then(this.setBusy)
     }
   },
 
@@ -103,11 +95,26 @@ export default {
   },
 
   /**
+   * Set the items and length of the v-data-table from the response
+   * of service after the apply the mapItems function.
    * 
+   * @param {Object} res - the service response.
    */
   setItems(res) {
-    this.table.length = res.total
-    this.table.items = res.data
+
+    // verify if the response has items nad length
+    const hasItems  = !! res[this.resItems]
+    const hasLength = !! res[this.resLength]
+
+    // set the items from the response
+    if (hasItems) {
+      this.table.items = res[this.resItems]
+    }
+
+    // set the length from the response
+    if (hasLength) {
+      this.table.length = res[this.resLength]
+    }
   },
 
   /**

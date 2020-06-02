@@ -90,6 +90,22 @@ export default {
   },
 
   /**
+   * 
+   */
+  resLength: {
+    type: String,
+    default: 'length',
+  },
+
+  /**
+   * 
+   */
+  resItems: {
+    type: String,
+    default: 'items',
+  },
+
+  /**
    * The service function.
    */
   service: {
