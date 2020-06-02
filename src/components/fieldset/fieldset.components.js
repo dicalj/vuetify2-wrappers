@@ -19,7 +19,7 @@ import VSelectModel from '../fields/select-model'
 import VTimeField from '../fields/time'
 
 //vue2-editor
-// import { VueEditor as VEditor } from "vue2-editor"
+import { VueEditor as VEditor } from "vue2-editor"
 
 //
 export default {
@@ -32,7 +32,7 @@ export default {
   VDataTable,
   VDateField,
   VDateTimeField,
-  //VEditor,
+  VEditor,
   VFileInput,
   VFloatField,
   //VIconField,
