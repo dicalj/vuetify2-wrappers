@@ -116,7 +116,7 @@ export default {
       itemKey           : 'id',
       items             : this.table.items,
       loading           : this.busy,
-      serverItemsLength : this.length,
+      serverItemsLength : this.table.length,
       showSelect        : true,
     }
   },
