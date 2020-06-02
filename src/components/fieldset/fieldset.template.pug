@@ -12,6 +12,7 @@ fieldset( v-bind='fieldsetProps' )
             :is='element | type' 
             v-bind='element.prop' 
             v-bind:value='getValue(element.name)' 
+            v-on:change='setValue(element.name, $event)'
             v-on:input='setValue(element.name, $event)'
             ) {{ element.html }}
 
