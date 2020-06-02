@@ -59,6 +59,15 @@ export default {
   },
 
   /**
+   * { function_description }
+   * 
+   * @param   {boolean}  [value=false]  The value
+   */
+  async setWait(value = false) {
+    this.loading = value 
+  },
+
+  /**
    * 
    */
   submit() {
