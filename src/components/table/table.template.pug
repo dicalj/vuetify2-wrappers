@@ -43,3 +43,6 @@ v-data-table.vw-table(
       component( :is='header.component' v-bind='header.props' v-model='props.item[props.header.value]' ) {{ props.item.value }}
     template( v-if='header.format' )
       span( v-text='header.format(props.value)' )
+
+  // table footer
+  slot( name='footer' slot='footer' )
