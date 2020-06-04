@@ -10,11 +10,30 @@ export default {
 
   /**
    * 
+   */
+  getPropsLabel(prop) {
+
+    // check field props label
+    if (prop.fieldProps) {
+      return prop.fieldProps.label
+    }
+
+    // check select props label
+    if (prop.selectProps) {
+      return prop.selectProps.label
+    }
+
+    // default
+    return prop.label
+  },
+
+  /**
+   * 
    * @param {*} event 
    */
   mapHelp(item) {
     return {
-      title: item.prop ? item.prop.label : item.props ? item.props.label : '',
+      title: this.getPropsLabel(item.prop ? item.prop : item.props),
       description: item.info,
     }
   },
