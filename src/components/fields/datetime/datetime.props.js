@@ -119,6 +119,14 @@ export default {
   },
 
   /**
+   * 
+   */
+  selectButtonText: {
+    type: String,
+    default: 'Seleccionar',
+  },
+
+  /**
    * The submit properties.
    */
   submitProps: {

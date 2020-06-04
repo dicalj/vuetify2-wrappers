@@ -66,4 +66,16 @@ export default {
   timer() {
     return false
   },
+
+  /**
+   * 
+   */
+  selectButtonProps() {
+    return {
+      color: this.readonly ? '' : 'primary',
+      style: {
+        marginTop: '-2px',
+      }
+    }
+  },
 }

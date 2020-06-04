@@ -5,6 +5,14 @@ v-dialog( v-bind='dialogProps' v-model='dialog' )
   template( slot='activator' slot-scope='props' )
     v-text-field( readonly v-bind='fieldProps' v-model='datetime' v-on='props.on' )
 
+      // datetime field append
+      template( slot='append' )
+        v-tooltip( bottom )
+          template( slot='activator' slot-scope='props' )
+            v-btn( icon small v-bind='selectButtonProps' v-on='props.on' @click='dialog = true' )
+              v-icon( small ) {{ dateIcon }}
+          span {{ selectButtonText }}
+
   // datetime picker          
   v-card( tile v-bind='cardProps' )
     v-card-text( v-bind='textProps' )

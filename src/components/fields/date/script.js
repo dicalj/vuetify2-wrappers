@@ -3,17 +3,29 @@ export default {
   computed: {
 
     /**
-     * 
+     *
      */
     isMonthly() {
         return this.pickerProps.type === 'month'
     },
 
     /**
-     * 
+     *
      */
     isReadonly() {
         return this.pickerProps.readonly
+    },
+
+    /**
+     *
+     */
+    selectButtonProps() {
+      return {
+        color: this.readonly ? '' : 'primary',
+        style: {
+          marginTop: '-2px',
+        }
+      }
     },
   },
   data () {
@@ -26,7 +38,7 @@ export default {
   props: {
 
     /**
-     * 
+     *
      */
     fieldProps: {
         type: Object,
@@ -34,18 +46,18 @@ export default {
     },
 
     /**
-     * 
+     *
      */
-    hideDetails: Boolean,            
-    
+    hideDetails: Boolean,
+
     /**
-     * 
+     *
      */
     pickerProps: {
         type: Object,
         default: () => ({})
-    }, 
-    
+    },
+
     /**
      *
      */
@@ -62,14 +74,14 @@ export default {
     },
 
     /**
-     * 
+     *
      */
     value: String,
 },
 methods: {
 
     /**
-     * 
+     *
      */
     format ( data ) {
 
@@ -87,7 +99,7 @@ methods: {
     },
 
     /**
-     * 
+     *
      */
     reset () {
         this.date = this.value || "";
@@ -126,21 +138,21 @@ methods: {
   watch: {
 
     /**
-     * 
+     *
      */
     date () {
         this.formatted = this.format( this.date );
     },
 
     /**
-     * 
+     *
      */
     formatted () {
         if ( !this.pickerProps.readonly ) this.$emit( 'input', this.date )
     },
 
     /**
-     * 
+     *
      */
     value () {
         this.reset()
