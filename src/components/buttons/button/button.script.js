@@ -19,7 +19,8 @@ export default {
       large, 
       loading, 
       small, 
-      text 
+      text ,
+      to
     }) => ({ 
       block, 
       class: classes, 
@@ -30,7 +31,8 @@ export default {
       large, 
       loading,
       small, 
-      text 
+      text,
+      to
     }),
     mapTooltipProps: ({ 
       bottom, 
