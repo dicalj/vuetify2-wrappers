@@ -16,6 +16,7 @@ export default {
       disabled, 
       icon, 
       large, 
+      loading, 
       small, 
       text 
     }) => ({ 
@@ -25,6 +26,7 @@ export default {
       disabled,
       icon, 
       large, 
+      loading,
       small, 
       text 
     }),
