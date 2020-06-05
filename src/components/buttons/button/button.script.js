@@ -10,6 +10,7 @@ export default {
   },
   methods: {
     mapButtonProps: ({ 
+      block, 
       classes, 
       color, 
       dark, 
@@ -20,6 +21,7 @@ export default {
       small, 
       text 
     }) => ({ 
+      block, 
       class: classes, 
       color, 
       dark, 
