@@ -7,6 +7,7 @@ import VwTable from './src/components/table'
 import VwLayoutCenter from './src/components/layouts/center'
 // import VwLayoutDashboard from './src/components/layouts/dashboard'
 //import VwLayoutInbox from './src/components/layouts/inbox'
+import VwLayoutNotFound from './src/components/layouts/not-found'
 
 // plugin
 export default {
@@ -16,6 +17,7 @@ export default {
         VwBtn,
         VwForm,
         VwLayoutCenter,
+        VwLayoutNotFound,
         VwTable,
       },
     })
