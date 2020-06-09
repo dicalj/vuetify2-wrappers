@@ -5,9 +5,9 @@ export default {
     /**
      * 
      */
-    tableProps() {
+    _tableProps() {
       return {
-        headers: this.headers,
+        ...this.tableProps,
         items: this.value,
       }
     }
@@ -17,9 +17,9 @@ export default {
     /**
      * 
      */
-    headers: {
-      type: Array,
-      default: () => [],
+    tableProps: {
+      type: Object,
+      default: () => ({}),
     },
 
     /**
