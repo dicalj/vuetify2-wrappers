@@ -7,11 +7,20 @@ export default {
      */
     tableProps() {
       return {
+        headers: this.headers,
         items: this.value,
       }
     }
   },
   props: {
+
+    /**
+     * 
+     */
+    headers: {
+      type: Array,
+      default: () => [],
+    },
 
     /**
      * 

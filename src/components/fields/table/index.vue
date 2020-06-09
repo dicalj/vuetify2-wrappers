@@ -1,3 +1,3 @@
-<template lang='pug' script='./table.template.pug'/>
-<script script='./table.script.js'/>
-<style script='./table.style.css'/>
+<template lang='pug' src='./table.template.pug'/>
+<script src='./table.script.js'/>
+<style src='./table.style.css'/>

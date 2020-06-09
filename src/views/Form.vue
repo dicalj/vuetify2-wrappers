@@ -298,6 +298,16 @@ export default {
               placeholder: 'float',   
             },
           },
+          {
+            name: 'items',
+            type: 'table-field',
+            props: {
+              headers: [],
+              label: 'float',
+              persistentHint: true,
+              placeholder: 'float',   
+            },
+          },
         ]
       }
     }
@@ -321,6 +331,7 @@ export default {
         time: '12:00',
         currency: 100.50,
         float: 100.50,
+        items: [],
       }
     }
   },
