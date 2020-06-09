@@ -1,6 +1,13 @@
 // toolbar container
 v-toolbar( v-bind='toolbarProps' )
+
+  // toolbar title
+  v-toolbar-title( v-bind='titleProps' v-if='showTitle' ) {{ title }}
+
+  // toolbar search slot
   slot( name='search' )
+
+  // spacer
   v-spacer
 
   // toolbar items

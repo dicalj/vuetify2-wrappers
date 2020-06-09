@@ -1,16 +1,38 @@
-//
+// the table computed component
 export default {
+
+  /**
+   * The merge filter button props with the props & data provided by
+   * the parent table component.
+   */
+  _filterButtonProps() {
+    return {
+      ...this.filterButtonProps,
+      color: this.filterButtonColor
+    }
+  },
+
+  /**
+   * The merge filter form props with the props & data provided by
+   * the parent table component.
+   */
+  _filterFormProps() {
+    return {
+      ...this.filterProps,
+      items     : this.filters,
+      noHelp    : true,
+      noMenu    : true,
+      submitText: 'filtrar',
+      textProps : { class: 'px-4 py-0' },
+      title     : 'Filtros',
+    }
+  },
 
   /**
    * 
    */
-  filterButtonProps() {
-    return {
-      bottom: true,
-      dark  : true,
-      icon  : true,
-      tip   : 'Filtrar',
-    }
+  filterButtonColor() {
+    return this.filterShow ? this.filterButtonActiveColor : this.filterButtonProps.color
   },
 
   /**
@@ -23,16 +45,8 @@ export default {
   /**
    * 
    */
-  _filterProps() {
-    return {
-      ...this.filterProps,
-      items     : this.filters,
-      noHelp    : true,
-      noMenu    : true,
-      submitText: 'filtrar',
-      textProps : { class: 'px-4 py-0' },
-      title     : 'Filtros',
-    }
+  filterShow() {
+    return Boolean(this.filter.show)
   },
 
   /**
@@ -89,13 +103,31 @@ export default {
   /**
    * 
    */
-  refreshButtonProps() {
+  _refreshButtonProps() {
     return {
-      bottom: true,
-      dark  : true,
-      icon  : true,
-      tip   : 'Filtrar',
+      ...this.refreshButtonProps,
     }
+  },
+
+  /**
+   * { item_description }
+   */
+  showFilter() {
+    return !this.noFilter
+  },
+
+  /**
+   * { item_description }
+   */
+  showRefresh() {
+    return !this.noRefresh
+  },
+
+  /**
+   * { item_description }
+   */
+  showSearch() {
+    return !this.noSearch
   },
 
   /**
@@ -112,12 +144,13 @@ export default {
     return {
       dense             : true,
       disabled          : this.busy,
+      footerProps       : this.footerProps,
       headers           : this.headersToRender.map(this.mapSortable),
       itemKey           : 'id',
       items             : this.table.items,
       loading           : this.busy,
       serverItemsLength : this.table.length,
-      showSelect        : true,
+      showSelect        : this.showSelect,
     }
   },
 
@@ -130,7 +163,8 @@ export default {
       dark  : true,
       dense : true,
       flat  : true,
-      noMenu: this.noMenu,          
+      noMenu: this.noMenu,  
+      title : this.title,        
     }
   },
 }

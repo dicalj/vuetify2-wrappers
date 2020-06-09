@@ -6,6 +6,15 @@ export default {
   components: {
     VwBtn,
   },
+  computed: {
+
+    /**
+     * 
+     */
+    showTitle() {
+      return !! this.title
+    },
+  },
   data() {
     return {
       menues: false,
@@ -113,6 +122,23 @@ export default {
         bottom: true,
         icon: true,
         tip: 'secondary tip',
+      }),
+    },
+
+    /**
+     * Toolbar title
+     */
+    title: {
+      type: String,
+    },
+
+    /**
+     * 
+     */
+    titleProps: {
+      type: Object,
+      default: () => ({
+        class: 'mr-2',
       }),
     },
 

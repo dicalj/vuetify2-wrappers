@@ -10,11 +10,40 @@ export default {
   },
 
   /**
+   * The filter button active color.
+   */
+  filterButtonActiveColor: {
+    type: String,
+    default: 'accent',
+  },
+
+  /**
+   * The filter button props.
+   */
+  filterButtonProps: {
+    type: Object,
+    default: () => ({
+      bottom: true,
+      dark  : true,
+      icon  : true,
+      tip   : 'Filtrar',
+    }),
+  },
+
+  /**
    * The filter props.
    */
   filterProps: {
     type: Object,
-    default: () => ({}),
+    default: () => ({
+      buttonsProps: {
+        small: true,
+      },
+      cardProps: {
+        elevation: 0,
+        tile: true,
+      },
+    }),
   },
 
   /**
@@ -74,9 +103,33 @@ export default {
   },
 
   /**
+   * Hide filters flag
+   */
+  noFilter: {
+    type: Boolean,
+    default: false,
+  },
+
+  /**
    * Hide menu flag
    */
   noMenu: {
+    type: Boolean,
+    default: false,
+  },
+
+  /**
+   * Hide refresh flag
+   */
+  noRefresh: {
+    type: Boolean,
+    default: false,
+  },
+
+  /**
+   * Hide toolbar search flag.
+   */
+  noSearch: {
     type: Boolean,
     default: false,
   },
@@ -87,6 +140,19 @@ export default {
   noToolbar: {
     type: Boolean,
     default: false,
+  },
+
+  /**
+   * The filter button props.
+   */
+  refreshButtonProps: {
+    type: Object,
+    default: () => ({
+      bottom: true,
+      dark  : true,
+      icon  : true,
+      tip   : 'Refrescar',
+    }),
   },
 
   /**
@@ -106,6 +172,14 @@ export default {
   },
 
   /**
+   * 
+   */
+  showSelect: {
+    type: Boolean,
+    default: true,
+  },
+
+  /**
    * The service function.
    */
   service: {
@@ -114,5 +188,12 @@ export default {
       data: [],
       length: 0,
     })
+  },
+
+  /**
+   * 
+   */
+  title: {
+    type: String,
   },
 }

@@ -1,11 +1,7 @@
 // table container
-v-data-table.vw-table( 
-  :options.sync='options' 
-  v-bind='tableProps' 
-  v-model='selected' 
-  @item-selected='onSelectItem'
-  @toggle-select-all='onSelectAll'
-  @update:options='onUpdateOptions' 
+v-data-table.vw-table( :options.sync='options' v-bind='tableProps' 
+  v-model='selected' @item-selected='onSelectItem'
+  @toggle-select-all='onSelectAll' @update:options='onUpdateOptions' 
   )
 
   // table top slot
@@ -13,16 +9,16 @@ v-data-table.vw-table(
     vw-toolbar-table( v-bind='toolbarProps' v-if='showToolbar' )
 
       // table toolbar search
-      template( slot='search' )
+      template( slot='search' v-if='showSearch' )
         vw-search-field( v-model='search' @click-remove='onResetSearch' @click-search='onSubmitSearch' )
 
       // table toolbar items
       template( slot='toolbar-items' )
         slot( name='toolbar-items' )
-        vw-btn( v-bind='filterButtonProps' @click='onClickFilter' )
+        vw-btn( v-bind='_filterButtonProps' v-if="showFilter" @click='onClickFilter' )
           v-badge( color='accent' dot v-model='filterDataLength' )
             v-icon mdi-filter
-        vw-btn( v-bind='refreshButtonProps' @click='onClickRefresh' )
+        vw-btn( v-bind='refreshButtonProps' v-if="showRefresh" @click='onClickRefresh' )
           v-icon mdi-refresh
 
       // toolbar toolbar menu items
@@ -30,8 +26,8 @@ v-data-table.vw-table(
         slot( name='toolbar-menu-items' )
 
     // table filter
-    template( v-if='filter.show' )
-      vw-form( v-bind='_filterProps' v-model='filter.data' @click-reset='onResetFilter' @click-submit='onSubmitFilter' )
+    template( v-if='filterShow' )
+      vw-form( v-bind='_filterFormProps' v-model='filter.data' @click-reset='onResetFilter' @click-submit='onSubmitFilter' )
 
   // actions
   template( slot='item.actions' slot-scope='props' )
