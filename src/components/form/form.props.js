@@ -45,14 +45,6 @@ export default {
   /**
    * { item_description }
    */
-  dialogCardTitle: {
-    type: String,
-    default: 'Titulo',
-  },
-
-  /**
-   * { item_description }
-   */
   dialogCardSubtitle: {
     type: String,
     default: 'Subtitulo',
@@ -103,6 +95,14 @@ export default {
         description: 'Descripción',
       }
     ],
+  },
+
+  /**
+   * { item_description }
+   */
+  infoTitle: {
+    type: String,
+    default: 'Titulo',
   },
 
   /**

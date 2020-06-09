@@ -33,7 +33,7 @@ v-form.vw-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
   // form dialog
   v-dialog( v-bind='dialogProps' v-model='dialogs.help' )
     v-card( v-bind='dialogCardProps' )
-      v-card-title {{ dialogCardTitle }}
+      v-card-title {{ infoTitle }}
       v-card-subtitle {{ dialogCardSubtitle }}
       v-card-text 
         template( v-for='help in helps' )
