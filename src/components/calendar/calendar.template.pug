@@ -1,0 +1,23 @@
+v-sheet.vw-calendar
+
+  // toolbar
+  v-toolbar( flat )
+    vw-btn( bottom text tip='Anterior' @click='onClickPrevious' ) 
+      v-icon.mr-2 mdi-arrow-left
+      span anterior
+    //- vw-btn( bottom tip='Agregar' ) agregar
+    v-spacer
+    vw-btn( bottom :loading='busy' text tip='Refrescar' @click='onClickRefresh' ) refrescar
+    vw-btn( bottom text  tip='Siguiente' @click='$refs.calendar.next()' ) siguiente
+      v-icon.ml-2 mdi-arrow-right
+
+  // calendar    
+  v-calendar( 
+    event-height='64'
+    event-margin-bottom='8'
+    ref='calendar' 
+    :weekdays='weekday' 
+    v-bind='calendarProps' 
+    v-model='value' 
+    @click:event='onClickInterval' 
+  )
