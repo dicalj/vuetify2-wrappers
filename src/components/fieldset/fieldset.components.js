@@ -17,6 +17,7 @@ import VFloatField from '../fields/float'
 import VPasswordField from '../fields/password'
 import VRutField from '../fields/rut'
 import VSelectModel from '../fields/select-model'
+import VTableField from '../fields/table'
 import VTimeField from '../fields/time'
 
 //vue2-editor
@@ -43,6 +44,7 @@ export default {
   VRutField,
   VSelect,
   VSelectModel,
+  VTableField,
   VTextarea,
   VTextField,
   VTimeField,
