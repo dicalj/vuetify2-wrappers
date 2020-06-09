@@ -17,6 +17,14 @@ export default {
     /**
      * 
      */
+    label: {
+      type: String,
+      default : '',
+    },
+
+    /**
+     * 
+     */
     tableProps: {
       type: Object,
       default: () => ({}),

@@ -1,2 +1,10 @@
+// data table
 v-data-table( v-bind='_tableProps' )
-//- span ola
+
+  // top
+  template( slot='top' )
+    v-toolbar
+      v-toolbar-title {{ label }}
+      v-toolbar-items
+        slot( name='items' )
+      
