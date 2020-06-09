@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 //
 import FormView from '@/views/Form'
 import TableView from '@/views/Table'
+import NotFoundView from '@/views/NotFound'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,11 @@ Vue.use(VueRouter)
     path: '/table',
     name: 'table',
     component: TableView
+  },
+  {
+    path: '/not-found',
+    name: 'not-found',
+    component: NotFoundView
   },
 ]
 
