@@ -1,10 +1,20 @@
 // data table
 v-data-table( v-bind='_tableProps' )
 
-  // top
+  // data table top
   template( slot='top' )
-    v-toolbar
-      v-toolbar-title {{ label }}
-      v-toolbar-items
+
+    // data table toolbar
+    v-toolbar( v-bind='toolbarProps' )
+      v-toolbar-title( v-bind='titleProps' ) {{ label }}
+      v-spacer
+      v-toolbar-items( v-bind='itemsProps' )
         slot( name='items' )
+        vw-btn( bottom icon tip='Agregar' @click='onClickAdd' )
+          v-icon mdi-plus
+        vw-btn( bottom icon tip='Eliminar' )
+          v-icon mdi-delete
+
+    // data table dialog
+    vw-dialog-table( v-bind='dialogProps' v-model='dialogs.picker' @submit='onSubmit' )
       

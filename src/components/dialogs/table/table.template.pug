@@ -1,0 +1,11 @@
+// dialog
+v-dialog( persistent v-bind='dialogProps' v-model='_value' )
+  v-card( v-bind='cardProps' )
+    v-card-title( v-bind='titleProps' ) {{ title }}
+      v-spacer
+      vw-btn( bottom icon tip='Cerrar' @click='onClickClose' )
+        v-icon mdi-close
+    v-card-text( v-bind='textProps' )
+      vw-table( v-bind='tableProps' v-model='selected' )
+    v-card-actions( v-bind='actionsProps' )
+      vw-btn( color='primary' v-bind='buttonProps' @click='onSubmit' ) agregar

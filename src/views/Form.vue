@@ -9,7 +9,7 @@
 import WForm from '@/components/form'
 
 export default {
-  name: 'form',
+  name: 'form-view',
   components: {
     WForm,
   },
@@ -301,11 +301,25 @@ export default {
           {
             name: 'items',
             type: 'table-field',
-            props: {
-              headers: [],
-              label: 'float',
-              persistentHint: true,
-              placeholder: 'float',   
+            flex: {
+              cols: 12,
+            },
+            prop: {
+              tableProps: {
+                dense: true,
+                headers: [],
+              },
+              titleProps: {
+                class: 'subtitle-2 mr-2 text-uppercase',
+              },
+              toolbarProps: {
+                color: 'primary',
+                dark: true,
+                dense: true,
+                flat: true,
+                small: true,
+              },
+              label: 'float',   
             },
           },
         ]

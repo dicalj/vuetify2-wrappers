@@ -168,7 +168,7 @@ export default {
      * { item_description }
      */
     value: {
-      type: String,
+      type: [Number, String],
       default: '',
     }
   }
