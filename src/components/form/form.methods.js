@@ -69,12 +69,13 @@ export default {
 
   /**
    * Reduces the slots.
+   * 
    * @param   {Array}   slots - The slots
    * @param   {Object}  item - The item
    * @return  {Array}   the notches of items.
    */
-  reduceNotches(notches, item) {
-    return item.slots ? Object.values(item.slots).concat(notches) : notches
+  reduceSlots(slots, item) {
+    return item.slots ? slots.concat(Object.values(item.slots)) : slots
   },
 
   /**
@@ -106,5 +107,9 @@ export default {
    */
   async wait(value = false) {
     this.loading = value 
+  },
+
+  see(notch) {
+    console.log({ notch }, 'notch')
   },
 }

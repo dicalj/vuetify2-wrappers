@@ -16,9 +16,17 @@ v-form.vw-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
     
     // form content
     v-card-text( v-bind='textProps' )
-      w-fieldset( v-bind='fieldsetProps' v-model='_value' )
-        template( :slot='notch' slot-scope='props' v-for='notch in notches' )
-          slot( :name='notch' v-bind='props' )
+      w-fieldset( ref='fieldset' v-bind='fieldsetProps' v-model='_value' )
+
+        // exmaple slots
+        template( slot='items-items' )
+          span ola
+
+        // form slots
+        template( :slot='slotName' v-for='slotName in itemsSlots' slot-scope='props' )
+            slot( :name='slotName' v-bind='props' )
+
+        // form append    
         template( slot='append' )
           slot( name='append' )
     

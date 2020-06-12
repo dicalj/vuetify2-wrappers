@@ -13,4 +13,7 @@ export default {
   filters: WFieldsetFilters,
   methods: WFieldsetMethods,
   props: WFieldsetProps,
+  mounted() {
+    console.log(this)
+  },
 }

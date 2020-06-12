@@ -1,17 +1,32 @@
 <template>
   <div class="form pa-4">
-    <w-form v-bind="wFormProps" v-model='wFormModel'/>
+    <vw-form v-bind="wFormProps" v-model='wFormModel'>
+      <template slot='items-items'>
+        <span>ola</span>
+        <vw-btn>
+          <v-icon>mdi-plus</v-icon>
+        </vw-btn>
+        <vw-dialog-form v-model="dialogs.form"/>
+        <vw-dialog-table v-model="dialogs.table"/>
+      </template>
+    </vw-form>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import WForm from '@/components/form'
+import VwDialogForm from '@/components/dialogs/form'
+import VwDialogTable from '@/components/dialogs/table'
+import VwBtn from '@/components/buttons/button'
+import VwForm from '@/components/form'
 
 export default {
   name: 'form-view',
   components: {
-    WForm,
+    VwBtn,
+    VwDialogForm,
+    VwDialogTable,
+    VwForm,
   },
   computed: {
 
@@ -304,7 +319,7 @@ export default {
             flex: {
               cols: 12,
             },
-            prop: {
+            props: {
               tableProps: {
                 dense: true,
                 headers: [
@@ -326,6 +341,9 @@ export default {
               },
               label: 'float',   
             },
+            slots: {
+              'items': 'items-items'
+            },
           },
         ]
       }
@@ -333,6 +351,10 @@ export default {
   },
   data() {
     return {
+      dialogs: {
+        form: false,
+        table: false,
+      },
       wFormModel:{
         nested: {
           password: 'password-field-nested',

@@ -17,7 +17,7 @@ fieldset( v-bind='fieldsetProps' )
             ) {{ element.html }}
 
             // fieldset field slots
-            template( :slot='key' slot-scope='props' v-for='(name, key) in element.slots' )
+            template( :slot='key' slot-scope='props' v-for='(name, key) in element.slot' )
               slot( :name='name' v-bind='props' )
 
     // fieldset append            

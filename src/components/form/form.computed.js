@@ -115,8 +115,8 @@ export default {
    * { function_description }
    * @return     {<type>}  { description_of_the_return_value }
    */
-  notches() {
-    return this.items.reduce(this.reduceNotches, [])
+  itemsSlots() {
+    return this.items.reduce(this.reduceSlots, [])
   },
 
   /**

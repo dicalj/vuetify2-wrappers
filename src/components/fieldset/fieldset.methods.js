@@ -40,6 +40,7 @@ export default {
       type: String(item.type),
       flex: Object.assign({}, item.flex || flex),
       prop: Object.assign({}, item.prop || item.props),
+      slot: Object.assign({}, item.slot || item.slots),
       html: String(item.html),
     }
   },

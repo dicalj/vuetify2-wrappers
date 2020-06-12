@@ -1,5 +1,5 @@
 // data table
-v-data-table( v-bind='_tableProps' )
+v-data-table( :items='value' v-bind='tableProps' v-model='selected' )
 
   // data table top
   template( slot='top' )
@@ -10,14 +10,4 @@ v-data-table( v-bind='_tableProps' )
       v-spacer
       v-toolbar-items( v-bind='itemsProps' )
         slot( name='items' )
-        vw-btn( bottom icon tip='Agregar' @click='onClickNew' )
-          v-icon mdi-pencil-plus
-        vw-btn( bottom icon tip='Agregar' @click='onClickAdd' )
-          v-icon mdi-table-plus
-
-    // data table dialog
-    vw-dialog-table( v-bind='dialogProps' v-model='dialogs.picker' @submit='onSubmit' )
-
-    // form dialog
-    vw-dialog-form( v-bind='dialogFormProps' v-model='dialogs.form' @submit='onSubmitForm' )
       
