@@ -1,11 +1,13 @@
 //
 import VwBtn from '../../buttons/button'
+import VwDialogForm from '../../dialogs/form'
 import VwDialogTable from '../../dialogs/table'
 
 //
 export default {
   components: {
     VwBtn,
+    VwDialogForm,
     VwDialogTable,
   },
   computed: {
@@ -24,6 +26,7 @@ export default {
     return {
       dialogs: {
         picker: false,
+        form: false,
       }
     }
   },
@@ -37,15 +40,36 @@ export default {
     },
 
     /**
+     * { item_description }
+     */
+    onClickNew() {
+      this.dialogs.form = !this.dialogs.form
+    },
+
+    /**
      * Called on submit dialog.
      *
      * @param      {object}  event   The event
      */
-    onSubmitDialog(event) {
+    onSubmit(event) {
       this.$emit('input', [
         ...this.value,
         ...event.items,
       ])
+      this.dialogs.picker = false
+    },
+
+    /**
+     * Called on submit dialog.
+     *
+     * @param      {object}  event   The event
+     */
+    onSubmitForm(event) {
+      this.$emit('input', [
+        ...this.value,
+        event.item,
+      ])
+      this.dialogs.form = false
     },
   },
   props: { 
@@ -54,6 +78,14 @@ export default {
      * 
      */
     dialogProps: {
+      type: Object,
+      default: () => ({}),
+    },
+
+    /**
+     * 
+     */
+    dialogFormProps: {
       type: Object,
       default: () => ({}),
     },

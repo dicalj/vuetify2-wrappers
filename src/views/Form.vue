@@ -307,7 +307,12 @@ export default {
             prop: {
               tableProps: {
                 dense: true,
-                headers: [],
+                headers: [
+                  {
+                    text: 'text',
+                    value: 'text',
+                  },
+                ],
               },
               titleProps: {
                 class: 'subtitle-2 mr-2 text-uppercase',
@@ -345,7 +350,11 @@ export default {
         time: '12:00',
         currency: 100.50,
         float: 100.50,
-        items: [],
+        items: [
+          {
+            text: 'ola'
+          }
+        ],
       }
     }
   },
