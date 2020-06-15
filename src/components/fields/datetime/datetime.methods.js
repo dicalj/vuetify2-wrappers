@@ -55,7 +55,7 @@ export default {
    */
   resetData() {
     this.date = DEFAULT_DATE.split('/').reverse().map(this.mapDate).join('-')
-    this.time = DEFAULT_TIME
+    this.time = DEFAULT_TIME.split(':').map(this.mapDate).join(':')
   },
 
   /**
