@@ -8,6 +8,13 @@ export default {
     columns() {
       return this.headers.concat([ { text: 'actions', value: '$actions' } ])
     },
+
+    /**
+     * 
+     */
+    headers() {
+      return this.tableProps ? this.tableProps.headers ? this.tableProps.headers : [] : []
+    },
   },
   data() {
     return {
