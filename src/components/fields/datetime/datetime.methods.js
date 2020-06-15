@@ -62,7 +62,7 @@ export default {
    * Reset the datetime input.
    */
   resetInput() {
-    this.$emit('input', null)      
+    this.$emit('input', this.datetime)      
   },
 
   /**
