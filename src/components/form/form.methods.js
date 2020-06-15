@@ -58,6 +58,7 @@ export default {
    */
   onClickReset() {
     this.$emit('click-reset', this.value)
+    this.$emit('reset', this._value)
   },
 
   /**
