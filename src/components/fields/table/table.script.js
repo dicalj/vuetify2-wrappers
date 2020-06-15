@@ -5,8 +5,19 @@ export default {
     /**
      * 
      */
+    actionsProps() {
+      return {
+        class: 'text-right',
+        text: this.actionsText,
+        value: '$actions',
+      }
+    },
+
+    /**
+     * 
+     */
     columns() {
-      return this.noActions ? this.headers : this.headers.concat([ { text: this.actionsText, value: '$actions' } ])
+      return this.noActions ? this.headers : this.headers.concat([ this.actionsProps ])
     },
 
     /**
