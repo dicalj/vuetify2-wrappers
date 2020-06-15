@@ -1,5 +1,15 @@
 // data table
-v-data-table( :items='value' v-bind='tableProps' v-model='selected' )
+v-data-table( 
+  :headers='columns'
+  :items='value' 
+  v-bind='tableProps' 
+  v-model='selected' 
+  )
+
+  // data table actions slot
+  template( slot='item.$actions' slot-scope='props' )
+    slot( name='actions' v-bind='props' )
+
 
   // data table top
   template( slot='top' )

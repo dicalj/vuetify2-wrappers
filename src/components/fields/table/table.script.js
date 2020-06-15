@@ -1,5 +1,14 @@
 //
 export default {
+  computed: {
+
+    /**
+     * 
+     */
+    columns() {
+      return this.headers.concat([ { text: 'actions', value: '$actions' } ])
+    },
+  },
   data() {
     return {
       selected: [],
