@@ -7,7 +7,7 @@ export default {
      */
     actionsProps() {
       return {
-        class: 'text-right',
+        align: 'right',
         text: this.actionsText,
         value: '$actions',
       }
