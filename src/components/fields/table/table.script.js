@@ -8,6 +8,7 @@ export default {
     actionsProps() {
       return {
         align: 'right',
+        sortable: false,
         text: this.actionsText,
         value: '$actions',
       }
