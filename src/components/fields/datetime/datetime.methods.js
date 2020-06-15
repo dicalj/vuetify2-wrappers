@@ -1,5 +1,5 @@
 //
-const DEFAULT_DATE = new Date(Date.now()).toLocaleDateString().split('/').reverse().join('-')
+const DEFAULT_DATE = new Date(Date.now()).toLocaleDateString()
 const DEFAULT_TIME = new Date(Date.now()).toLocaleTimeString()
 
 //
@@ -15,6 +15,13 @@ export default {
     } else {
       this.onClickReset()
     }
+  },
+
+  /**
+   * 
+   */
+  mapDate(day) {
+    return day.length < 2 ? `0${ day }` : day
   },
 
   /**
@@ -47,7 +54,7 @@ export default {
    * Reset the datetime field data.
    */
   resetData() {
-    this.date = DEFAULT_DATE
+    this.date = DEFAULT_DATE.split('/').reverse().map(this.mapDate).join('-')
     this.time = DEFAULT_TIME
   },
 
