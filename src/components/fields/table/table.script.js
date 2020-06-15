@@ -6,7 +6,7 @@ export default {
      * 
      */
     columns() {
-      return this.headers.concat([ { text: 'actions', value: '$actions' } ])
+      return this.noActions ? this.headers : this.headers.concat([ { text: this.actionsText, value: '$actions' } ])
     },
 
     /**
@@ -26,6 +26,14 @@ export default {
     /**
      * 
      */
+    actionsText: {
+      type: String,
+      default: 'Acciones',
+    },
+
+    /**
+     * 
+     */
     itemsProps: {
       type: Object,
       default: () => ({}),
@@ -37,6 +45,14 @@ export default {
     label: {
       type: String,
       default : '',
+    },
+
+    /**
+     * 
+     */
+    noActions: {
+      type: Boolean,
+      default: false,
     },
 
     /**
