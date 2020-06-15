@@ -1,6 +1,6 @@
 //
-const DEFAULT_DATE = ''
-const DEFAULT_TIME = '00:00:00'
+const DEFAULT_DATE = new Date(Date.now()).toLocaleDateString().split('/').reverse().join('-')
+const DEFAULT_TIME = new Date(Date.now()).toLocaleTimeString()
 
 //
 export default {
@@ -9,7 +9,12 @@ export default {
    * Initializes the object.
    */
   init() {
-
+    if (this.value) {
+      this.date = this.value.split(' ').shift()
+      this.time = this.value.split(' ').pop()
+    } else {
+      this.onClickReset()
+    }
   },
 
   /**
