@@ -1,0 +1,8 @@
+v-row( v-bind='rowProps' )
+  template( v-for='item in items' )
+    v-checkbox( 
+      :label='item[itemText]'
+      :value='item[itemValue]'
+      v-bind='radioProps'
+      v-model='_value'
+      )
