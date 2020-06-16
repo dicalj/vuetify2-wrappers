@@ -22,6 +22,17 @@ export default {
       },
     },
   },
+  methods: {
+
+    /**
+     * 
+     */
+    init() {
+      this.headers.forEach(header => {
+        this._value.push('')
+      })
+    },
+  },
   props: {
 
     /**
@@ -95,5 +106,8 @@ export default {
       type: Array,
       default: () => [],
     },
-  }
+  },
+  mounted() {
+    this.init()
+  },
 }
