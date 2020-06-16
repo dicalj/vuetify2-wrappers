@@ -10,7 +10,7 @@ table( style='width: 100%;' )
         td {{ item[itemText] }}
         template( v-for='header in headers' )
           td.text-center
-            v-radio( 
+            v-radio.justify-space-around( 
               :value='item[itemValue]'
               v-bind='radioProps'
               )
