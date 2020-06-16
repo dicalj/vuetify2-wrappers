@@ -12,7 +12,7 @@ export default {
        */
       get() {
         return this.value,
-      }
+      },
 
       /**
        * 
