@@ -9,7 +9,7 @@ table
       tr
         td {{ item[itemText] }}
         template( v-for='header in headers' )
-          td
+          td.text-center
             v-radio( 
               :value='item[itemValue]'
               v-bind='radioProps'
