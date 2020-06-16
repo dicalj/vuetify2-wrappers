@@ -1,14 +1,28 @@
 //
 export default {
-  props: {
-    
+  computed: {
+
     /**
      * 
      */
-    groupProps: {
-      type: Object,
-      default: () => ({}),
+    _value: {
+
+      /**
+       * 
+       */
+      get() {
+        return this.value,
+      }
+
+      /**
+       * 
+       */
+      set(val) {
+        this.$emit('input', val)
+      },
     },
+  },
+  props: {
 
     /**
      * 
@@ -64,6 +78,22 @@ export default {
     radioProps: {
       type: Object,
       default: () => ({}),
+    },
+    
+    /**
+     * 
+     */
+    tableProps: {
+      type: Object,
+      default: () => ({}),
+    },
+
+    /**
+     * 
+     */
+    value: {
+      type: Array,
+      default: () => [],
     },
   }
 }
