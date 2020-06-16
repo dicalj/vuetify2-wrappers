@@ -1,0 +1,7 @@
+v-radio-group( v-bind='groupProps' v-model='_value' )
+  template( v-for='item in items' )
+    v-radio( 
+      :label='item[itemText]'
+      :value='item[itemValue]'
+      v-bind='radioProps'
+      )
