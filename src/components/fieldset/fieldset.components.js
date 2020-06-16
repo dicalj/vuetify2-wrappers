@@ -16,6 +16,7 @@ import VDateField from '../fields/date'
 import VDateTimeField from '../fields/datetime'
 import VFloatField from '../fields/float'
 import VPasswordField from '../fields/password'
+import VRadioGridField from '../fields/radio-grid'
 import VRadioGroupField from '../fields/radio-group'
 import VRutField from '../fields/rut'
 import VSelectModel from '../fields/select-model'
@@ -43,6 +44,7 @@ export default {
   VFloatField,
   //VIconField,
   VPasswordField,
+  VRadioGridField,
   VRadioGroupField,
   VRating,
   VRutField,
