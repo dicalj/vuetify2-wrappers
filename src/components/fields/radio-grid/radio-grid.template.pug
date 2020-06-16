@@ -13,6 +13,6 @@ v-simple-table( v-bind='tableProps' )
             td.text-center
               v-radio-group( v-model='_value[index]' )
                 v-radio.justify-space-around( 
-                  :value='item[itemValue]'
+                  :value='header[headerValue]'
                   v-bind='radioProps'
                   )
