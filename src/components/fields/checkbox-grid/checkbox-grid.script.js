@@ -39,6 +39,14 @@ export default {
     },
   },
   props: {
+    
+    /**
+     * 
+     */
+    checkboxProps: {
+      type: Object,
+      default: () => ({}),
+    },
 
     /**
      * 
@@ -86,14 +94,6 @@ export default {
     itemValue: {
       type: String,
       default: 'value',
-    },
-    
-    /**
-     * 
-     */
-    radioProps: {
-      type: Object,
-      default: () => ({}),
     },
     
     /**

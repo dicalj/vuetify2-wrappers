@@ -3,16 +3,16 @@ v-simple-table( v-bind='tableProps' )
     thead
       tr
         th
-        template( v-for='header in headers' )
+        template( v-for='(header, idx) in headers' )
           th {{ header[headerText] }}
     tbody
-      template( v-for='(item, index) in items' )
+      template( v-for='(item, idx) in items' )
         tr
           td {{ item[itemText] }}
           template( v-for='header in headers' )
             td.text-center
-              v-radio-group( v-model='_value[index]' )
-                v-radio.justify-space-around( 
-                  :value='header[headerValue]'
-                  v-bind='radioProps'
-                  )
+              v-checkbox.justify-space-around( 
+                :value='header[headerValue]'
+                v-bind='checkboxProps'
+                v-model='_value[jdx][idx]'
+                )
