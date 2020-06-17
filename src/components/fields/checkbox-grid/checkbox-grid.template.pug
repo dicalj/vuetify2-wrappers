@@ -3,7 +3,7 @@ v-simple-table( v-bind='tableProps' )
     thead
       tr
         th
-        template( v-for='(header, idx) in headers' )
+        template( v-for='(header, jdx) in headers' )
           th {{ header[headerText] }}
     tbody
       template( v-for='(item, idx) in items' )
