@@ -22,6 +22,11 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      ready: false,
+    }
+  },
   methods: {
 
     /**
@@ -36,6 +41,7 @@ export default {
           this._value[i][j] = false
         })
       })
+      this.ready = true
     },
   },
   props: {
