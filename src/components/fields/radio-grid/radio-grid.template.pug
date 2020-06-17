@@ -11,7 +11,7 @@ v-simple-table( v-bind='tableProps' )
           td {{ item[itemText] }}
           template( v-for='header in headers' )
             td.text-center
-              v-radio-group( v-model='_value[index]' )
+              v-radio-group( v-bind='radioGroupProps' v-model='_value[index]' )
                 v-radio.justify-space-around( 
                   :value='header[headerValue]'
                   v-bind='radioProps'

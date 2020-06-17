@@ -86,6 +86,14 @@ export default {
     /**
      * 
      */
+    radioGroupProps: {
+      type: Object,
+      default: () => ({}),
+    },
+    
+    /**
+     * 
+     */
     radioProps: {
       type: Object,
       default: () => ({}),
