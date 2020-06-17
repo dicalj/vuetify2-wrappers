@@ -1,0 +1,18 @@
+v-simple-table( v-bind='tableProps' )
+  template( slot='default' )
+    thead
+      tr
+        th
+        template( v-for='header in headers' )
+          th {{ header[headerText] }}
+    tbody
+      template( v-for='(item, index) in items' )
+        tr
+          td {{ item[itemText] }}
+          template( v-for='header in headers' )
+            td.text-center
+              v-radio-group( v-model='_value[index]' )
+                v-radio.justify-space-around( 
+                  :value='header[headerValue]'
+                  v-bind='radioProps'
+                  )
