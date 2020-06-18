@@ -57,6 +57,14 @@ export default {
   /**
    * The items array.
    */
+  itemKey: {
+    type: String,
+    default: 'id',
+  },
+
+  /**
+   * The items array.
+   */
   items: {
     type: Array,
     default: () => [],

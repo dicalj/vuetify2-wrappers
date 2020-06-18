@@ -146,7 +146,7 @@ export default {
       disabled          : this.busy,
       footerProps       : this.footerProps,
       headers           : this.headersToRender.map(this.mapSortable),
-      itemKey           : 'id',
+      itemKey           : this.itemKey,
       items             : this.table.items,
       loading           : this.busy,
       serverItemsLength : this.table.length,
