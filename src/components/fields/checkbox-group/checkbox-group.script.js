@@ -5,6 +5,14 @@ export default {
     /**
      * 
      */
+    checkboxProps: {
+      type: Object,
+      default: () => ({}),
+    },
+    
+    /**
+     * 
+     */
     groupProps: {
       type: Object,
       default: () => ({}),
