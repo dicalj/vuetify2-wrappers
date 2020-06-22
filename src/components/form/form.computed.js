@@ -128,6 +128,14 @@ export default {
   },
 
   /**
+   * Determine if show the help.
+   * @returns {Boolean} display help flag.
+   */
+  showHelp() {
+    return !this.noHelp
+  },
+
+  /**
    * Determine if show the reset button.
    * @returns {Boolean} boolean flag.
    */

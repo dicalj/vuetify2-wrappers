@@ -129,6 +129,11 @@ export default {
   /**
    * 
    */
+  noHelp: Boolean,
+  
+  /**
+   * 
+   */
   noMenu: Boolean,
 
   /**

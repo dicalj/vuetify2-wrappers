@@ -7,11 +7,12 @@ v-form.vw-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
       w-toolbar-form( v-bind='_toolbarProps' )
         slot( name='items' slot='items' )
         template( slot='items' )
-          v-tooltip( bottom )
-            template( slot='activator' slot-scope='props' )
-              v-btn( icon v-on='props.on' @click='onClickHelp' )
-                v-icon {{ helpIcon }}
-            span Ayuda
+          template( v-if='showHelp' )
+            v-tooltip( bottom )
+              template( slot='activator' slot-scope='props' )
+                v-btn( icon v-on='props.on' @click='onClickHelp' )
+                  v-icon {{ helpIcon }}
+              span Ayuda
         slot( name='options' slot='options' )
     
     // form content
