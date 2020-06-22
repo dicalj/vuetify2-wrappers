@@ -37,7 +37,7 @@ export default {
     /**
      * 
      */
-    rowPropsProps: {
+    rowProps: {
       type: Object,
       default: () => ({}),
     },
