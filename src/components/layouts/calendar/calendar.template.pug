@@ -8,6 +8,12 @@ v-sheet( v-bind='sheetProps' )
         v-icon mdi-arrow-right
       v-spacer
       slot( name='items' )
-  v-calendar( ref='calendar' v-bind='calendarProps' v-model='value' )
+  v-calendar( 
+    ref='calendar' 
+    v-bind='calendarProps' 
+    v-model='value' 
+    @click:day='$emit("click:day", $event)'
+    @click:event='$emit("click:event", $event)'
+    )
     template( slot='event' slot-scope='props' )
       slot( name='event' v-bind='props' )
