@@ -6,7 +6,7 @@ v-sheet( v-bind='sheetProps' )
         v-icon mdi-arrow-left
       vw-btn( bottom icon tip='Siguiente' @click='onClickNext' )
         v-icon mdi-arrow-right
-      v-space
+      v-spacer
       slot( name='items' )
   v-calendar( ref='calendar' v-bind='calendarProps' )
     template( slot='event' slot-scope='props' )
