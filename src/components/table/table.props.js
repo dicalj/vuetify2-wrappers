@@ -2,6 +2,14 @@
 export default {
 
   /**
+   * 
+   */
+  actionsProps: {
+    type: Object,
+    default: () => ({}),
+  },
+
+  /**
    * The filters array.
    */
   filters: {

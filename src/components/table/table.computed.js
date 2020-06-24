@@ -82,6 +82,7 @@ export default {
       text  : 'Acciones',
       value : 'actions',
       width : '10%',
+      ...this.actionsProps,
     }
   },
 
