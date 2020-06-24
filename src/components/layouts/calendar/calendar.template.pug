@@ -5,13 +5,13 @@ v-sheet( v-bind='sheetProps' )
 
   //
   v-toolbar( v-bind='toolbarProps' )
-    v-toolbar-title( v-bind='titleProps' ) {{ title }}
-    v-toolbar-items( v-bind='itemsProps' )
+    v-toolbar-items( v-bind='paginationProps' )
       vw-btn( bottom icon tip='Anterior' @click='onClickPrev' )
         v-icon mdi-arrow-left
       vw-btn( bottom icon tip='Siguiente' @click='onClickNext' )
         v-icon mdi-arrow-right
-      v-spacer
+    v-toolbar-title( v-bind='titleProps' ) {{ title }}
+    v-toolbar-items( v-bind='itemsProps' )
       slot( name='items' )
 
   //

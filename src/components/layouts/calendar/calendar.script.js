@@ -48,6 +48,14 @@ export default {
     /**
      * 
      */
+    paginationProps: {
+      type: Object,
+      default: () => ({}),
+    },
+
+    /**
+     * 
+     */
     title: {
       type: String,
     },
