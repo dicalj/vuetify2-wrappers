@@ -44,6 +44,7 @@
       params() {
         return {
           get_all_results: this.getAllResults,
+          filter: this.filter,
           limit: this.getAllResults ? undefined : this.limit,
           sort: this.sort,
         }
@@ -148,6 +149,13 @@
       fetchKey: {
         type: String,
         default: 'fetch',
+      },
+      /**
+       * 
+       */
+      filter: {
+        type: Object,
+        default: () => ({}),
       },
       /**
        * 
