@@ -1,5 +1,27 @@
 //
+import VwBtn from '../../buttons/button'
+
+//
 export default {
+  components: {
+    VwBtn,
+  },
+  methods: {
+
+    /**
+     * 
+     */
+    onClickNext() {
+      this.$refs.calendar.next()
+    },
+
+    /**
+     * 
+     */
+    onClickPrev() {
+      this.$refs.calendar.prev()
+    },
+  },
   props: {
 
     /**

@@ -2,7 +2,12 @@ v-sheet( v-bind='sheetProps' )
   v-toolbar( v-bind='toolbarProps' )
     v-toolbar-title( v-bind='titleProps' ) {{ title }}
     v-toolbar-items( v-bind='itemsProps' )
+      vw-btn( bottom icon tip='Anterior' @click='onClickPrev' )
+        v-icon mdi-arrow-left
+      vw-btn( bottom icon tip='Siguiente' @click='onClickNext' )
+        v-icon mdi-arrow-right
+      v-space
       slot( name='items' )
-  v-calendar( v-bind='calendarProps' )
+  v-calendar( ref='calendar' v-bind='calendarProps' )
     template( slot='event' slot-scope='props' )
       slot( name='event' v-bind='props' )
