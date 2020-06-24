@@ -1,4 +1,9 @@
 v-sheet( v-bind='sheetProps' )
+
+  //
+  slot( name='prepend' )
+
+  //
   v-toolbar( v-bind='toolbarProps' )
     v-toolbar-title( v-bind='titleProps' ) {{ title }}
     v-toolbar-items( v-bind='itemsProps' )
@@ -8,6 +13,8 @@ v-sheet( v-bind='sheetProps' )
         v-icon mdi-arrow-right
       v-spacer
       slot( name='items' )
+
+  //
   v-calendar( 
     ref='calendar' 
     v-bind='calendarProps' 
@@ -17,3 +24,6 @@ v-sheet( v-bind='sheetProps' )
     )
     template( slot='event' slot-scope='props' )
       slot( name='event' v-bind='props' )
+
+  //
+  slot( name='append' )
