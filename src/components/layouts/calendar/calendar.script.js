@@ -6,6 +6,11 @@ export default {
   components: {
     VwBtn,
   },
+  data() {
+    return {
+      value: '',
+    }
+  },
   methods: {
 
     /**
