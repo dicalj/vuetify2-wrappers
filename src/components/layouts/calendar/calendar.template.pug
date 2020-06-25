@@ -1,4 +1,4 @@
-v-sheet( v-bind='sheetProps' )
+v-sheet.vw-calendar( v-bind='sheetProps' )
 
   //
   slot( name='prepend' )
@@ -15,7 +15,7 @@ v-sheet( v-bind='sheetProps' )
       slot( name='items' )
 
   //
-  v-calendar.vw-calendar( 
+  v-calendar( 
     ref='calendar' 
     v-bind='calendarProps' 
     v-model='value' 
