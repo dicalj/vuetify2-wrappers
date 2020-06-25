@@ -48,9 +48,26 @@ export default {
     /**
      * 
      */
+    loading: {
+      type: Boolean,
+    },
+
+    /**
+     * 
+     */
     paginationProps: {
       type: Object,
       default: () => ({}),
+    },
+
+    /**
+     * 
+     */
+    progressProps: {
+      type: Object,
+      default: () => ({
+        indeterminate: true,
+      }),
     },
 
     /**

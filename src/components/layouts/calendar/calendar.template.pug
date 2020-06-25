@@ -1,6 +1,9 @@
 v-sheet.vw-calendar( v-bind='sheetProps' )
 
   //
+  v-progress-linear( v-bind='progressProps' v-if='loading' )
+
+  //
   slot( name='prepend' )
 
   //
