@@ -19,6 +19,7 @@ v-sheet.vw-calendar( v-bind='sheetProps' )
     ref='calendar' 
     v-bind='calendarProps' 
     v-model='value' 
+    @click:date='$emit("click:date", $event)'
     @click:day='$emit("click:day", $event)'
     @click:event='$emit("click:event", $event)'
     )
