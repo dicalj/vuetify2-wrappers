@@ -2,6 +2,10 @@
 fieldset( v-bind='fieldsetProps' )
   v-container( v-bind='containerProps' )
 
+    //
+    v-row( v-bind='rowProps' )
+      slot( name='prepend' )
+
     // fieldset fields
     v-row( v-bind='rowProps' )
       template( v-for='element in elements' )
@@ -20,6 +24,6 @@ fieldset( v-bind='fieldsetProps' )
             template( :slot='key' slot-scope='props' v-for='(name, key) in element.slot' )
               slot( :name='name' v-bind='props' )
 
-    // fieldset append            
+    // fieldset append
     v-row( v-bind='rowProps' )
       slot( name='append' )

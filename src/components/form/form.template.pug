@@ -30,6 +30,10 @@ v-form.vw-form( ref='form' v-bind='_formProps' @submit='onSubmitForm' )
         // form append    
         template( slot='append' )
           slot( name='append' )
+
+        // form append    
+        template( slot='prepend' )
+          slot( name='prepend' )
     
     // form actions
     template( v-if='showActions' )
