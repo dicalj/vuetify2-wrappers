@@ -12,6 +12,16 @@ export default {
     prevProps: {
       type: Object,
       default: () => ({}),
-    }
+    },
+
+    /**
+     * 
+     */
+    toolbarProps: {
+      type: Object,
+      default: () => ({
+        flat: true,
+      }),
+    },
   }
 }

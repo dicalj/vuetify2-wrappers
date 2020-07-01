@@ -1,7 +1,7 @@
 v-sheet.vw-calendar
 
   // toolbar
-  v-toolbar( flat )
+  v-toolbar( v-bind='toolbarProps' )
     vw-btn( bottom text tip='Anterior' @click='onClickPrevious' ) 
       v-icon.mr-2 mdi-arrow-left
       span anterior
