@@ -67,6 +67,14 @@ export default {
     },
 
     /**
+     * The v-list-item items.
+     */
+    items: {
+      type: Array,
+      default: () => ([]),
+    },
+
+    /**
      * The v-list properties.
      */
     listProps: {
