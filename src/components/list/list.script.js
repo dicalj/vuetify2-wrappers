@@ -27,6 +27,13 @@ export default {
     },
 
     /**
+     * The v-card loading flag.
+     */
+    busy: {
+      type: Boolean,
+    },
+
+    /**
      * The v-card properties.
      */
     cardProps: {

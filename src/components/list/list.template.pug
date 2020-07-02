@@ -1,4 +1,4 @@
-v-card( v-bind='cardProps' )
+v-card( :loading='busy' v-bind='cardProps' )
   v-card-title( v-bind='titleProps' ) {{ title }}
     v-spacer
     slot( name='items' )
