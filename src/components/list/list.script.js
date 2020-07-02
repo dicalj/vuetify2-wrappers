@@ -99,6 +99,13 @@ export default {
     },
 
     /**
+     * The v-subheader display flag.
+     */
+    noSubheader: {
+      type: Boolean,
+    },
+
+    /**
      * The v-subheader text.
      */
     subheader: {

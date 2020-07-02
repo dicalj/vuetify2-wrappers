@@ -5,7 +5,7 @@ v-card( v-bind='cardProps' )
   v-card-text( v-bind='textProps' )
     slot( name='prepend' )
     v-list( v-bind='listProps' )
-      v-subheader( v-bind='subheaderProps' ) {{ subheader }}
+      v-subheader( v-bind='subheaderProps' v-if='!noSubheader' ) {{ subheader }}
       template( v-for='item in items')
         v-list-item( v-bind='itemProps' )
           v-list-item-avatar( v-bind='avatarProps' )
