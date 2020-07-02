@@ -30,7 +30,7 @@ export default {
      * The v-card loading flag.
      */
     busy: {
-      type: Boolean,
+      type: [Boolean, String],
     },
 
     /**
