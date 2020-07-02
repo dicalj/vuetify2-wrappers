@@ -1,10 +1,10 @@
 v-card( v-bind='cardProps' )
-  v-card-title( v-bind='titleProps' )
+  v-card-title( v-bind='titleProps' ) {{ title }}
     v-spacer
     slot( name='items' )
   v-card-text( v-bind='textProps' )
     v-list( v-bind='listProps' )
-      v-subheader( v-bind='subheaderProps' )
+      v-subheader( v-bind='subheaderProps' ) {{ subheader }}
       template( v-for='item in items')
         v-list-item( v-bind='itemProps' )
           v-list-item-avatar( v-bind='avatarProps' )

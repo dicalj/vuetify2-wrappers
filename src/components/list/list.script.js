@@ -75,6 +75,14 @@ export default {
     },
 
     /**
+     * The v-subheader text.
+     */
+    subheader: {
+      type: String,
+      default: '',
+    },
+
+    /**
      * The v-subheader properties.
      */
     subheaderProps: {
@@ -88,6 +96,14 @@ export default {
     textProps: {
       type: Object,
       default: () => ({}),
+    },
+
+    /**
+     * The v-card-title text.
+     */
+    title: {
+      type: String,
+      default: '',
     },
 
     /**
