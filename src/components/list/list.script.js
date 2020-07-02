@@ -53,9 +53,25 @@ export default {
     /**
      * The v-list-item-subtitle properties.
      */
+    itemSubtitle: {
+      type: String,
+      default: '',
+    },
+
+    /**
+     * The v-list-item-subtitle properties.
+     */
     itemSubtitleProps: {
       type: Object,
       default: () => ({}),
+    },
+
+    /**
+     * The v-list-item-title properties.
+     */
+    itemTitle: {
+      type: String,
+      default: '',
     },
 
     /**
