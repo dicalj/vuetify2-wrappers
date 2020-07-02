@@ -1,6 +1,7 @@
 // components
 import VwBtn from './src/components/buttons/button'
 import VwForm from './src/components/form'
+import VwList from './src/components/list'
 import VwTable from './src/components/table'
 
 // layouts
@@ -18,6 +19,7 @@ export default {
         VwForm,
         VwLayoutCenter,
         VwLayoutNotFound,
+        VwList,
         VwTable,
       },
     })

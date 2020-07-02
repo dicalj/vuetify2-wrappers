@@ -1,7 +1,17 @@
-v-list
-  v-list-item
-    v-list-item-avatar
-    v-list-item-content
-      v-list-item-title
-      v-list-item-subtitle
-    v-list-item-action
+v-card( v-bind='cardProps' )
+  v-card-title( v-bind='titleProps' )
+    v-spacer
+    slot( name='items' )
+  v-card-text( v-bind='textProps' )
+    v-list( v-bind='listProps' )
+      v-subheader( v-bind='subheaderProps' )
+      template( v-for='item in items')
+        v-list-item( v-bind='itemProps' )
+          v-list-item-avatar( v-bind='avatarProps' )
+            slot( name='avatar' )
+          v-list-item-content( v-bind='contentProps' )
+            v-list-item-title( v-bind='itemTitleProps' )
+            v-list-item-subtitle( v-bind='itemSubtitleProps' )
+          v-list-item-action( v-bind='actionProps' )
+  v-card-actions( v-bind='actionsProps' )
+    slot( name='actions' )

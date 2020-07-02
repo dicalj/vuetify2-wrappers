@@ -88,10 +88,7 @@ export default {
     fetch: {
       type: Function,
       default: async () => ({
-        data: [
-          'foo',
-          'bar',
-        ]
+        data: []
       }),
     },
 
