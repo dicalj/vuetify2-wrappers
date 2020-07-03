@@ -14,5 +14,6 @@ v-card( :loading='busy' v-bind='cardProps' )
             v-list-item-title( v-bind='itemTitleProps' ) {{ item[itemTitle] }}
             v-list-item-subtitle( v-bind='itemSubtitleProps' ) {{ item[itemSubtitle] }}
           v-list-item-action( v-bind='actionProps' )
+    slot( name='append' )
   v-card-actions( v-bind='actionsProps' )
     slot( name='actions' )
