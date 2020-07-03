@@ -1,5 +1,14 @@
 //
 export default {
+  methods: {
+
+    /**
+     * 
+     */
+    onItem(event) {
+      this.$emit('click-item', event)
+    },
+  },
   props: {
 
     /**
