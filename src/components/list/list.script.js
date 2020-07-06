@@ -59,6 +59,13 @@ export default {
     },
 
     /**
+     * The v-list-item-avatar slot v-icon content.
+     */
+    itemAvatar: {
+      type: String,
+    },
+
+    /**
      * The v-list-item properties.
      */
     itemProps: {

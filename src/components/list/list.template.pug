@@ -10,6 +10,7 @@ v-card( :loading='busy' v-bind='cardProps' )
         v-list-item( v-bind='itemProps' @click='onItem({ item })' )
           v-list-item-avatar( v-bind='avatarProps' )
             slot( name='avatar' )
+              v-icon {{ itemAvatar }}
           v-list-item-content( v-bind='contentProps' )
             v-list-item-title( v-bind='itemTitleProps' ) {{ item[itemTitle] }}
             v-list-item-subtitle( v-bind='itemSubtitleProps' ) {{ item[itemSubtitle] }}
