@@ -68,6 +68,20 @@ export default {
     /**
      * 
      */
+    loadingText: {
+      type: String,
+    },
+
+    /**
+     * 
+     */
+    loadingTitle: {
+      type: String,
+    },
+
+    /**
+     * 
+     */
     rowProps: {
       type: Object,
     },

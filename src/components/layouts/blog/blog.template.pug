@@ -9,6 +9,11 @@ v-container( v-bind='containerProps' )
             v-card-text( v-bind='textProps' ) {{ item[itemText] }}
             v-card-actions( v-bind='actionsProps' )
               slot( name='actions' )
+    template( v-else-if='loading' )
+      v-col( cols='12' )
+        v-card( v-bind='cardProps' )
+          v-card-title( v-bind='titleProps' ) {{ loadingTitle }}
+          v-card-text( v-bind='textProps' ) {{ loadingText }}
     template( v-else )
       v-col( cols='12' )
         v-card( v-bind='cardProps' )
