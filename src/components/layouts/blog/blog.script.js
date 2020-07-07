@@ -68,6 +68,13 @@ export default {
     /**
      * 
      */
+    loading: {
+      type: Boolean,
+    },
+
+    /**
+     * 
+     */
     loadingText: {
       type: String,
     },
