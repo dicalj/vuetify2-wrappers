@@ -8,3 +8,6 @@ v-container( v-bind='containerProps' )
           v-card-text( v-bind='textProps' ) {{ item[itemText] }}
           v-card-actions( v-bind='actionsProps' )
             slot( name='actions' )
+  v-row
+    v-col( cols='12' )
+      slot( name='append' )
