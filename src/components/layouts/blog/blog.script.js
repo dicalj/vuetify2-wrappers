@@ -26,6 +26,20 @@ export default {
     /**
      * 
      */
+    emptyText: {
+      type: String,
+    },
+
+    /**
+     * 
+     */
+    emptyTitle: {
+      type: String,
+    },
+
+    /**
+     * 
+     */
     itemText: {
       type: String,
     },

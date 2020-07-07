@@ -1,13 +1,19 @@
 v-container( v-bind='containerProps' )
   v-row( v-bind='rowProps' )
-    template( v-for='item in items' )
+    template( v-if='items.length' )
+      template( v-for='item in items' )
+        v-col( cols='12' )
+          v-card( v-bind='cardProps' )
+            v-card-title( v-bind='titleProps' ) {{ item[itemTitle] }}
+            v-card-subtitle( v-bind='subtitleProps' ) {{ item[itemSubtitle] }}
+            v-card-text( v-bind='textProps' ) {{ item[itemText] }}
+            v-card-actions( v-bind='actionsProps' )
+              slot( name='actions' )
+    template( v-else )
       v-col( cols='12' )
         v-card( v-bind='cardProps' )
-          v-card-title( v-bind='titleProps' ) {{ item[itemTitle] }}
-          v-card-subtitle( v-bind='subtitleProps' ) {{ item[itemSubtitle] }}
-          v-card-text( v-bind='textProps' ) {{ item[itemText] }}
-          v-card-actions( v-bind='actionsProps' )
-            slot( name='actions' )
+          v-card-title( v-bind='titleProps' ) {{ emptyTitle }}
+          v-card-text( v-bind='textProps' ) {{ emptyText }}
   v-row
     v-col( cols='12' )
       slot( name='append' )
