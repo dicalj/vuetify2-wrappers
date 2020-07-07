@@ -47,6 +47,13 @@ export default {
     /**
      * 
      */
+    items: {
+      type: Array,
+    },
+
+    /**
+     * 
+     */
     rowProps: {
       type: Object,
     },
