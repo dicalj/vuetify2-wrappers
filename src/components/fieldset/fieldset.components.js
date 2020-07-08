@@ -16,6 +16,7 @@ import VCurrencyField from '../fields/currency'
 import VDateField from '../fields/date'
 import VDateTimeField from '../fields/datetime'
 import VFloatField from '../fields/float'
+import VNative from '../fields/native'
 import VPasswordField from '../fields/password'
 import VRadioGridField from '../fields/radio-grid'
 import VRadioGroupField from '../fields/radio-group'
@@ -45,6 +46,7 @@ export default {
   VFileInput,
   VFloatField,
   //VIconField,
+  VNative,
   VPasswordField,
   VRadioGridField,
   VRadioGroupField,
