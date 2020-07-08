@@ -69,7 +69,7 @@ export default {
      * 
      */
     loading: {
-      type: Boolean,
+      type: [Boolean, String],
     },
 
     /**
