@@ -1,7 +1,7 @@
 v-container( v-bind='containerProps' )
 
   // prepend
-  v-row
+  v-row( v-if='!noPrepend' )
     v-col( cols='12' )
       slot( name='prepend' )
 

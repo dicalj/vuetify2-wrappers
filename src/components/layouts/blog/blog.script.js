@@ -89,6 +89,13 @@ export default {
     /**
      * 
      */
+    noPrepend: {
+      type: Boolean,
+    },
+
+    /**
+     * 
+     */
     rowProps: {
       type: Object,
     },
