@@ -1,0 +1,10 @@
+v-carousel(
+  cycle
+  height="400"
+  hide-delimiter-background
+  show-arrows-on-hover
+  v-bind='carouselProps'
+  )
+    template( v-for='item in items' )
+      v-carousel-item( v-bind='itemProps' )
+        v-img( :src='item[itemSrc]' v-bind='imageProps' )
