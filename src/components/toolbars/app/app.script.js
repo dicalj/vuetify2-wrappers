@@ -6,7 +6,7 @@ export default {
      * 
      */
     onIcon() {
-      this.$emit('click-icon'); console.log('click-icon')
+      this.$emit('click-icon'); console.log('click-icon:toolbar')
     },
   },
   props: {

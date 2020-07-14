@@ -13,6 +13,15 @@ export default {
       drawer: false,
     }
   },
+  methods: {
+
+    /**
+     * 
+     */
+    onIcon() {
+      this.drawer = !this.drawer; console.log('click-icon:dashboard')
+    },
+  },
   props: {
 
     /**
