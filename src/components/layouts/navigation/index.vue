@@ -1,2 +1,2 @@
-<template lang='pug' src='./drawer.template.pug' />
-<script src='./drawer.script.js' />
+<template lang='pug' src='./navigation.template.pug' />
+<script src='./navigation.script.js' />

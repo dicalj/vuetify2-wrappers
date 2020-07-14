@@ -1,5 +1,5 @@
 //
-import VwLayoutNavigation from '../navigation'
+import VwLayoutNavigation from '../../layouts/navigation'
 
 //
 export default {
