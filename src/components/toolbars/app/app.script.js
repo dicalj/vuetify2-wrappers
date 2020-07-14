@@ -1,5 +1,21 @@
 //
 export default {
+  computed: {
+
+    /**
+     * 
+     */
+    clipped() {
+      return !! this.$vuetify.breakpoint.lgAndUp
+    },
+
+    /**
+     * 
+     */
+    elevated() {
+      return this.raised || scrollY ? elevation : 0
+    },
+  },
   methods: {
 
     /**
@@ -7,6 +23,13 @@ export default {
      */
     onIcon() {
       this.$emit('click-icon'); console.log('click-icon:toolbar')
+    },
+
+    /**
+     * 
+     */
+    onScroll() {
+      this.scrollY = window.scrollY
     },
   },
   props: {
@@ -52,5 +75,8 @@ export default {
     tooltipProps: {
       type: Object,
     },
+  },
+  created () {
+    window.addEventListener("scroll", this.scrolled)
   },
 }
