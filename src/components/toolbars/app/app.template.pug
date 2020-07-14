@@ -1,0 +1,17 @@
+// content
+v-app-bar( v-bind='toolbarProps' )
+
+  // bar icon
+  v-tooltip( v-bind='tooltipProps' )
+    template( slot='activator' slot-scope='props' )
+      v-app-bar-nav-icon( v-on='props.on' @click.stop='onIcon' )
+    span {{ tooltip }}
+
+  // title
+  v-toolbar-title( v-bind='titleProps' ) {{ title }}
+
+  // space between title and items
+  v-spacer
+
+  // items
+  slot( name='items' )

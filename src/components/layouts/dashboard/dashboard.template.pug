@@ -1,0 +1,8 @@
+.vw-layout-dashboard
+  v-navigation-drawer( v-bind='drawerProps' )
+  vw-toolbar-app( v-bind='toolbarProps' )
+    template( slot='items' )
+      slot( name='items' )
+  slot( name='prepend' )
+  v-content( v-bind='contentProps' )
+    router-view
