@@ -1,5 +1,5 @@
 //
-import VwToolbarApp from
+import VwToolbarApp from '../../toolbars/app'
 
 //
 export default {
