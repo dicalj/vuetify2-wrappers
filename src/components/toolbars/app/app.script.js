@@ -6,7 +6,7 @@ export default {
      * 
      */
     onIcon() {
-      this.$emit('click:icon')
+      this.$emit('click-icon')
     },
   },
   props: {
