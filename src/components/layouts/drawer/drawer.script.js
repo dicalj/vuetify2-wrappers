@@ -33,7 +33,7 @@ export default {
     /**
      * 
      */
-    drawerProps: {
+    navigationProps: {
       type: Object,
     },
 
