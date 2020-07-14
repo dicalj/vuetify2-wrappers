@@ -1,5 +1,14 @@
 //
 export default {
+  methods: {
+
+    /**
+     * 
+     */
+    onIcon() {
+      this.$emit('click:icon')
+    },
+  },
   props: {
 
     /**
