@@ -1,10 +1,17 @@
 //
+import VwLayoutDrawer from '../../layouts/drawer'
 import VwToolbarApp from '../../toolbars/app'
 
 //
 export default {
   components: {
+    VwLayoutDrawer,
     VwToolbarApp,
+  },
+  data() {
+    return {
+      drawer: false,
+    }
   },
   props: {
 

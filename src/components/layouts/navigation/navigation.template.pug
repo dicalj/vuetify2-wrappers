@@ -1,0 +1,45 @@
+v-list( dense nav )
+  v-list-item
+    v-list-item-content
+      v-list-item-title {{ title }}
+      v-list-item-subtitle( class='text-capitalize' ) {{ subtitle }}
+
+  v-divider( class='mb-1' )
+
+  template( v-for='item in items' )
+    v-list-group(
+      :class='item.model ? "grey lighten-4 mb-1" : "grey lighten-4 mb-1"'
+      v-if='item.data'
+      :key='item.text'
+      v-model='item.model'
+      :append='item.model ? item.icon : item["icon-alt"]'
+      style='border-radius: 4px;'
+    )
+      template( slot='activator' )
+        v-list-item( class="ma-0" )
+          v-list-item-action( class='ml-2 mr-4' v-if="item.icon" )
+            v-icon( small v-text='item.icon' )
+          v-list-item-content
+            v-list-item-title {{ item.text }}
+
+      v-list-item(
+        v-for="(child, i) in item.data"
+        :key="i"
+        link
+        @click='submit(child)'
+      )
+        v-list-item-action( class='mx-4' v-if="child.icon" )
+          v-icon( small v-text='child.icon' )
+        v-list-item-content
+          v-list-item-title {{ child.text }}
+
+    v-list-item(
+      v-else
+      :key="item.text"
+      link
+      @click='submit(item)'
+    )
+      v-list-item-action( class='mx-4' )
+        v-icon( small ) {{ item.icon }}
+      v-list-item-content
+        v-list-item-title {{ item.text }}
