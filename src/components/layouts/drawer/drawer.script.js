@@ -11,6 +11,13 @@ export default {
     /**
      * 
      */
+    clipped() {
+      return !! this.$vuetify.breakpoint.lgAndUp
+    },
+
+    /**
+     * 
+     */
     _value: {
 
       /**
