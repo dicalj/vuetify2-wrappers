@@ -6,6 +6,15 @@ export default {
   components: {
     VwToolbarApp,
   },
+  methods: {
+
+    /**
+     * 
+     */
+    onItem(event) {
+      this.$router.push(event.item[this.itemLink])
+    },
+  },
   props: {
 
     /**
@@ -13,6 +22,14 @@ export default {
      */
     items: {
       type: Array,
+    },
+
+    /**
+     * 
+     */
+    itemLink: {
+      type: String,
+      default: 'link',
     },
 
     /**

@@ -37,7 +37,7 @@ v-list( dense nav )
       v-else
       :key="item.text"
       link
-      @click='submit(item)'
+      @click='onItem({ item })'
     )
       v-list-item-action( class='mx-4' )
         v-icon( small ) {{ item.icon }}
