@@ -1,11 +1,16 @@
+// content
 v-list( dense nav )
+
+  // first item
   v-list-item
     v-list-item-content
       v-list-item-title {{ title }}
       v-list-item-subtitle( class='text-capitalize' ) {{ subtitle }}
 
+  // divider
   v-divider( class='mb-1' )
 
+  // items
   template( v-for='item in items' )
     v-list-group(
       :class='item.model ? "grey lighten-4 mb-1" : "grey lighten-4 mb-1"'
@@ -26,7 +31,7 @@ v-list( dense nav )
         v-for="(child, i) in item.data"
         :key="i"
         link
-        @click='submit(child)'
+        @click='onItem({ item: child })'
       )
         v-list-item-action( class='mx-4' v-if="child.icon" )
           v-icon( small v-text='child.icon' )
