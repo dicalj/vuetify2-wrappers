@@ -49,6 +49,16 @@ export default {
     /**
      * 
      */
+    subtitleProps: {
+      type: Object,
+      default: () => ({
+        class: 'text-capitalize',
+      }),
+    },
+
+    /**
+     * 
+     */
     title: {
       type: String,
     },
