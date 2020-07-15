@@ -13,8 +13,13 @@ export default {
      * 
      */
     elevated() {
-      return this.raised || scrollY ? elevation : 0
+      return this.raised || this.scrollY ? this.elevation : 0
     },
+  },
+  data () {
+    return {
+      scrollY: 0,
+    }
   },
   methods: {
 
@@ -33,6 +38,14 @@ export default {
     },
   },
   props: {
+
+    /**
+     * 
+     */
+    elevation: {
+      type: Number,
+      default: 2,
+    },
 
     /**
      * 
@@ -77,6 +90,6 @@ export default {
     },
   },
   created () {
-    window.addEventListener("scroll", this.scrolled)
+    window.addEventListener("scroll", this.onScroll)
   },
 }
