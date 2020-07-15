@@ -57,6 +57,14 @@ export default {
     /**
      * 
      */
+    raised: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     * 
+     */
     title: {
       type: String,
     },
