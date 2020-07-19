@@ -20,6 +20,4 @@ v-toolbar( v-bind='toolbarProps' )
         v-btn( v-bind='menuButtonProps' v-model='menues' v-on='on' )
           v-icon mdi-dots-vertical
       v-list( dense )
-        v-list-item( @click='$emit(exportEmit)' )
-          v-list-item-title {{ exportText }}
         slot( name='menu-items' )

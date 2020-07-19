@@ -6,7 +6,7 @@ v-data-table.vw-table( :options.sync='options' v-bind='tableProps'
 
   // table top slot
   template( slot='top' )
-    vw-toolbar-table( v-bind='toolbarProps' v-if='showToolbar' @click-export='onExport' )
+    vw-toolbar-table( v-bind='toolbarProps' v-if='showToolbar' )
 
       // table toolbar search
       template( slot='search' v-if='showSearch' )
@@ -23,6 +23,8 @@ v-data-table.vw-table( :options.sync='options' v-bind='tableProps'
 
       // toolbar toolbar menu items
       template( slot='menu-items' )
+        v-list-item( @click='onExport' )
+          v-list-item-title Exportar
         slot( name='toolbar-menu-items' )
 
     // table filter
