@@ -53,6 +53,13 @@ export default {
   /**
    * 
    */
+  mapColumn(item) {
+    return item.text
+  },
+
+  /**
+   * 
+   */
   mapRow(item) {
     return this.headers.reduce(this.reduceRow(item), {})
   },
