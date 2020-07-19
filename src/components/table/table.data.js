@@ -16,6 +16,14 @@ export default function data() {
     },
 
     /**
+     * The print data
+     */
+    print: {
+      columns: [],
+      rows: [],
+    },
+
+    /**
      * The table options
      */
     options: {
@@ -39,6 +47,7 @@ export default function data() {
      */
     table: {
       items: [],
+      length: 0,
     },
 
     /**

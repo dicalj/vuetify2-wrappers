@@ -6,7 +6,7 @@ v-data-table.vw-table( :options.sync='options' v-bind='tableProps'
 
   // table top slot
   template( slot='top' )
-    vw-toolbar-table( v-bind='toolbarProps' v-if='showToolbar' )
+    vw-toolbar-table( v-bind='toolbarProps' v-if='showToolbar' @click-export='onExport' )
 
       // table toolbar search
       template( slot='search' v-if='showSearch' )

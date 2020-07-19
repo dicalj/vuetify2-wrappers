@@ -12,7 +12,8 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "html-to-text": "^5.1.1",
-    "vue2-editor": "^2.10.2"
+    "vue2-editor": "^2.10.2",
+    "xlsx": "^0.16.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.0",

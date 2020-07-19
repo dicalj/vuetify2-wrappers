@@ -53,6 +53,13 @@ export default {
   /**
    * 
    */
+  mapRow(item) {
+    return this.headers.reduce(this.reduceRow(item), {})
+  },
+
+  /**
+   * 
+   */
   mapSortable(header) {
     return {
       ...header,
@@ -67,6 +74,21 @@ export default {
     return {
       ...header,
       slot: `item.${ header.value }`,
+    }
+  },
+
+  /**
+   * 
+   */
+  reduceRow: (item) => (row, header) => {
+
+    //
+    const itemValue = item[header.value]
+
+    //
+    return {
+      ...row,
+      [header.text]: header.format ? header.format(itemValue) : itemValue
     }
   },
 
@@ -132,6 +154,41 @@ export default {
   },
 
   /**
+   * 
+   */
+  async onExport() {
+
+    // required data
+    const exportTotal = this.table.length
+    const exportLimit = Math.min(1250, exportTotal)
+    const exportPages = Math.ceil(exportTotal / exportLimit)
+    // const exportCount = 0
+
+    // required params
+    const exportTitle = this.exportSheetTitle
+    const exportFile  = `${ this.exportName }.${ this.exportType }`
+
+    // initialize print data
+    this.print.columns = this.headers.map(this.mapColumn)
+    this.print.rows = []
+
+    // fetch rows
+    for (let page = 1; page <= pages; page++) {
+      await this.fetch().then(this.setRows)
+    }
+
+    // preparate xlsx book
+    const book  = xlsx.utils.book_new()
+    const sheet = xlsx.utils.json_to_sheet(this.print.rows, {
+      header: this.print.columns,
+    })
+
+    // write book
+    xlsx.utils.book_append_sheet(book, sheet, exportTitle)
+    xlsx.writeFile(book, exportFile)
+  },
+
+  /**
    * Called on reset filter.
    */
   onResetFilter() {
@@ -184,10 +241,23 @@ export default {
 
   /**
    * Sets the busy.
-   *
    * @param {boolean} [value=false] - The value.
    */
   setBusy(value = false) {
     this.busy = value
+  },
+
+  /**
+   * Set new rows in print data.
+   * @param {object} res - the fetch response.
+   */
+  setRows(res) {
+
+    //
+    const data = res.data || []
+    const rows = data.map(this.mapRow)
+
+    //
+    this.print.rows = this.print.rows.concat(rows)
   },
 }
