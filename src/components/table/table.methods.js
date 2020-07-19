@@ -158,6 +158,9 @@ export default {
    */
   async onExport() {
 
+    //
+    console.log('exporting')
+
     // required data
     const exportTotal = this.table.length
     const exportLimit = Math.min(1250, exportTotal)
