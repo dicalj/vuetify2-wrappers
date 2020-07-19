@@ -10,6 +10,30 @@ export default {
   },
 
   /**
+   * 
+   */
+  exportName: {
+    type: String,
+    default: 'export',
+  },
+
+  /**
+   * 
+   */
+  exportTitle: {
+    type: String,
+    default: 'export',
+  },
+
+  /**
+   * 
+   */
+  exportType: {
+    type: String,
+    default: 'xlsx',
+  },
+
+  /**
    * The filters array.
    */
   filters: {

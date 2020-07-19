@@ -178,7 +178,7 @@ export default {
     // const exportCount = 0
 
     // required params
-    const exportTitle = this.exportSheetTitle
+    const exportTitle = `${ this.exportTitle }`
     const exportFile  = `${ this.exportName }.${ this.exportType }`
 
     // initialize print data
