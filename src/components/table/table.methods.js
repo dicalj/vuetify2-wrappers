@@ -183,7 +183,7 @@ export default {
     this.print.rows = []
 
     // fetch rows
-    for (let page = 1; page <= pages; page++) {
+    for (let page = 1; page <= exportPages; page++) {
       await this.fetch().then(this.setRows)
     }
 
