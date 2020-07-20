@@ -9,13 +9,18 @@ v-sheet.vw-calendar( v-bind='sheetProps' )
     //
     v-progress-linear( v-bind='progressProps' v-if='loading' style='position: absolute; left: 0; top: 0;')
 
-    //
+    // toolbar actions
     v-toolbar-items( v-bind='paginationProps' )
       vw-btn( bottom icon tip='Anterior' @click='onClickPrev' )
         v-icon mdi-arrow-left
       vw-btn( bottom icon tip='Siguiente' @click='onClickNext' )
         v-icon mdi-arrow-right
+      slot( name='actions' v-bind='itemsProps' )
+
+    // toolbar title
     v-toolbar-title( v-bind='titleProps' ) {{ title }}
+
+    // toolbar items
     v-toolbar-items( v-bind='itemsProps' )
       slot( name='items' )
 
