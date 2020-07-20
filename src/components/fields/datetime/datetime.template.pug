@@ -3,7 +3,7 @@ v-dialog( v-bind='dialogProps' v-model='dialog' )
 
   // datetime field
   template( slot='activator' slot-scope='props' )
-    v-text-field( readonly v-bind='fieldProps' v-model='datetime' v-on='props.on' )
+    v-text-field( readonly :rules='_rules' v-bind='fieldProps' v-model='datetime' v-on='props.on' )
 
       // datetime field append
       template( slot='append' )

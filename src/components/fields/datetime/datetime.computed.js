@@ -14,6 +14,13 @@ export default {
   },
 
   /**
+   * 
+   */
+  _rules() {
+    return this.fieldProps.rules ? this.fieldProps.rules : []
+  }
+
+  /**
    * { function_description }
    *
    * @return     {Object}  { description_of_the_return_value }
