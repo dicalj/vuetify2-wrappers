@@ -1,13 +1,13 @@
 v-sheet.vw-calendar( v-bind='sheetProps' )
 
   //
-  v-progress-linear( v-bind='progressProps' v-if='loading' )
-
-  //
   slot( name='prepend' )
 
   //
   v-toolbar( v-bind='toolbarProps' )
+
+    //
+    v-progress-linear( v-bind='progressProps' v-if='loading' )
     v-toolbar-items( v-bind='paginationProps' )
       vw-btn( bottom icon tip='Anterior' @click='onClickPrev' )
         v-icon mdi-arrow-left
