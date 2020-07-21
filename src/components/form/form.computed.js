@@ -99,7 +99,7 @@ export default {
    */
   fieldsetProps() {
     return {
-      disabled: this.loading,
+      disabled: this.loading || !this.editable,
       items: this.items,
     }
   },
