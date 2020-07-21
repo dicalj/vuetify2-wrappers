@@ -99,8 +99,8 @@ export default {
    */
   fieldsetProps() {
     return {
-      disabled: this.loading || !this.editable,
-      items: this.items,
+      disabled: this.loading,
+      items: this.items.map(this.mapEditable),
     }
   },
 

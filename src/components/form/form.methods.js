@@ -29,6 +29,35 @@ export default {
 
   /**
    * 
+   */
+  mapEditable(item) {
+
+    // check prop
+    if (item.prop) {
+      return item.prop.readonly = !this.editable
+    }
+
+    // check prop field props
+    if (item.prop && item.prop.fieldProps) {
+      return item.prop.fieldProps.readonly = !this.editable
+    }
+
+    // check props
+    if (item.props) {
+      return item.props.readonly = !this.editable
+    }
+
+    // check props field props
+    if (item.props && item.props.fieldProps) {
+      return item.props.fieldProps.readonly = !this.editable
+    }
+
+    //
+    return item
+  },
+
+  /**
+   * 
    * @param {*} event 
    */
   mapHelp(item) {
