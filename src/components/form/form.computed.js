@@ -100,7 +100,7 @@ export default {
   fieldsetProps() {
     return {
       disabled: this.loading,
-      items: this.items.map(this.mapEditable),
+      items: this.items//.map(this.mapEditable),
     }
   },
 
