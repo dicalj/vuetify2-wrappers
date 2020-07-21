@@ -152,6 +152,7 @@ export default {
       loading           : this.busy,
       serverItemsLength : this.table.length,
       showSelect        : this.showSelect,
+      singleSelect      : this.singleSelect,
     }
   },
 

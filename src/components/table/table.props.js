@@ -220,6 +220,14 @@ export default {
   },
 
   /**
+   * 
+   */
+  singleSelect: {
+    type: Boolean,
+    default: false,
+  },
+
+  /**
    * The service function.
    */
   service: {
