@@ -14,6 +14,6 @@ export default {
   methods: WFieldsetMethods,
   props: WFieldsetProps,
   mounted() {
-    console.log(this)
+    // console.log(this)
   },
 }

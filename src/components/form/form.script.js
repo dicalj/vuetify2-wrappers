@@ -13,6 +13,6 @@ export default {
   methods: WFormMethods,
   props: WFormProps,
   mounted() {
-    console.log(this)
+    // console.log(this)
   },
 }
