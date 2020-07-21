@@ -25,6 +25,9 @@ v-sheet.vw-calendar( v-bind='sheetProps' )
       slot( name='items' )
 
   //
+  slot( name='prepend-calendar' )
+
+  //
   v-calendar( 
     ref='calendar' 
     v-bind='calendarProps' 
