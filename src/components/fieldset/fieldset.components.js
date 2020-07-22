@@ -25,6 +25,7 @@ import VRutField from '../fields/rut'
 import VSelectModel from '../fields/select-model'
 import VTableField from '../fields/table'
 import VTimeField from '../fields/time'
+import VTitleField from '../fields/title'
 
 //vue2-editor
 import { VueEditor as VEditor } from "vue2-editor"
@@ -61,6 +62,7 @@ export default {
   VTextarea,
   VTextField,
   VTimeField,
+  VTitleField,
   VToolbarTitle,
   VSubheader,
   VSwitch,
