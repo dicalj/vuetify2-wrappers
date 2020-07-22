@@ -14,6 +14,7 @@ export default {
      */
     noSubtitle: {
       type: Boolean,
+      default: false,
     },
 
     /**
@@ -21,6 +22,7 @@ export default {
      */
     noTitle: {
       type: Boolean,
+      default: false,
     },
     
     /**
