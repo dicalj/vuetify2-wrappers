@@ -1,5 +1,5 @@
 //
-import { VAlert, VCheckbox, VRating, VSlider, VSubheader } from 'vuetify/lib'
+import { VAlert, VCheckbox, VDivider, VRating, VSlider, VSubheader } from 'vuetify/lib'
 import { VAutocomplete, VCombobox } from 'vuetify/lib'
 import { VDataTable, VFileInput, VSelect, VTextarea, VTextField, VSwitch } from 'vuetify/lib'
 import { VToolbarTitle } from 'vuetify/lib'
@@ -45,6 +45,7 @@ export default {
   VDataTable,
   VDateField,
   VDateTimeField,
+  VDivider,
   VEditor,
   VFileInput,
   VFloatField,
