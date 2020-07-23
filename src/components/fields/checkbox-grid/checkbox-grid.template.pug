@@ -12,7 +12,7 @@ v-simple-table( v-bind='tableProps' )
           template( v-for='(header, jdx) in headers' )
             td.text-center( v-if='ready' )
               v-checkbox.justify-space-around( 
-                :true-value='jdx'
+                :value='jdx'
                 v-bind='checkboxProps'
                 v-model='_value[idx][jdx]'
                 )
