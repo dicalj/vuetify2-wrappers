@@ -4,7 +4,7 @@ v-simple-table( v-bind='tableProps' )
       tr
         th
         template( v-for='header in headers' )
-          th.px-5 {{ header[headerText] }}
+          th.text-center.pl-3 {{ header[headerText] }}
     tbody
       template( v-for='(item, index) in items' )
         tr
