@@ -10,7 +10,7 @@ export default {
        * 
        */
       get() {
-        return this.value
+        return this.value || ''
       },
 
       /**
