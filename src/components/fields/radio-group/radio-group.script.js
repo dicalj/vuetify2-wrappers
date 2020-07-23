@@ -46,7 +46,7 @@ export default {
      * 
      */
     value: {
-      type: Object,
+      type: Array,
       default: () => [],
     },
   }
