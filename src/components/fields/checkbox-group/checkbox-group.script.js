@@ -49,5 +49,13 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    
+    /**
+     * 
+     */
+    value: {
+      type: Object,
+      default: () => [],
+    },
   }
 }
