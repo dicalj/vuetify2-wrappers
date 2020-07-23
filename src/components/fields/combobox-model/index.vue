@@ -113,7 +113,7 @@
        * 
        */
       reset(res) {
-        this.value = res
+        this._value = res
       },
       /**
        * 
