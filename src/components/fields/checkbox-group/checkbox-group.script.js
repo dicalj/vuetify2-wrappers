@@ -1,5 +1,27 @@
 //
 export default {
+  computed: {
+
+    /**
+     * 
+     */
+    _value: {
+
+      /**
+       * 
+       */
+      get() {
+        return this.value
+      },
+
+      /**
+       * 
+       */
+      set(val) {
+        this.$emit('input', val)
+      },
+    },
+  },
   props: {
     
     /**
