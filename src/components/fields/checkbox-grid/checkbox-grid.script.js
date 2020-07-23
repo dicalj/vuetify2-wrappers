@@ -34,7 +34,7 @@ export default {
      */
     init() {
       this.items.forEach((item, i) => {
-        this._value[i] = []
+        this._value[i] = this.value[i]
       })
       
       this.ready = true
