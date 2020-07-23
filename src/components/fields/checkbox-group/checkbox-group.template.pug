@@ -2,7 +2,7 @@ v-row( v-bind='rowProps' )
   template( v-for='item in items' )
     v-checkbox( 
       :label='item[itemText]'
-      :value='item[itemValue]'
+      :value='item[itemValue] || i'
       v-bind='checkboxProps'
-      v-model='_value'
+      v-model='_value[i]'
       )
