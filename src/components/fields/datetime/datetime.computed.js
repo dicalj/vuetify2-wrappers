@@ -62,7 +62,7 @@ export default {
    * @return     {string}  { description_of_the_return_value }
    */
   datetime() {
-    return `${this.date} ${this.time}`
+    return this.value === '' ? '' : `${this.date} ${this.time}`
   },
 
   /**
