@@ -34,14 +34,10 @@ export default {
      */
     init() {
       this.items.forEach((item, i) => {
-        // this._value[i] = []
+        this._value[i] = []
       })
-      this.headers.forEach((header, j) => {
-        this.items.forEach((item, i) => {
-          // this._value[i][j] = false
-        })
-      })
-      // this.ready = true
+      
+      this.ready = true
     },
   },
   props: {
@@ -119,6 +115,6 @@ export default {
     },
   },
   mounted() {
-    // this.init()
+    this.init()
   },
 }
