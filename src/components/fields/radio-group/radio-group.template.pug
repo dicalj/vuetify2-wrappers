@@ -1,7 +1,7 @@
 v-radio-group( v-bind='groupProps' v-model='_value' )
-  template( v-for='item in items' )
+  template( v-for='(item, i) in items' )
     v-radio( 
       :label='item[itemText]'
-      :value='item[itemValue]'
+      :value='item[itemValue] || i'
       v-bind='radioProps'
       )
