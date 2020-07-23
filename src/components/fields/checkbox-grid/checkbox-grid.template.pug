@@ -9,10 +9,10 @@ v-simple-table( v-bind='tableProps' )
       template( v-for='(item, idx) in items' )
         tr
           td {{ item[itemText] }}
-          template( v-for='header in headers' )
+          template( v-for='(header, jdx) in headers' )
             td.text-center( v-if='ready' )
               v-checkbox.justify-space-around( 
-                :value='header[headerValue]'
+                :value='jdx'
                 v-bind='checkboxProps'
                 v-model='_value[idx][jdx]'
                 )
