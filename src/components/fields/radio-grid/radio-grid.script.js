@@ -29,7 +29,7 @@ export default {
      */
     init() {
       this.headers.forEach(header => {
-        this._value.push('')
+        // this._value.push('')
       })
     },
   },
@@ -116,6 +116,6 @@ export default {
     },
   },
   mounted() {
-    this.init()
+    // this.init()
   },
 }
