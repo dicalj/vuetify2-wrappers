@@ -11,14 +11,14 @@ export default {
        * 
        */
       get() {
-        return this.value
+        return this.value.slice().shift()
       },
 
       /**
        * 
        */
       set(val) {
-        this.$emit('input', val)
+        this.$emit('input', [val])
       },
     },
   },
