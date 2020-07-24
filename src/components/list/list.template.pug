@@ -2,6 +2,7 @@ v-card( :loading='busy' v-bind='cardProps' )
   v-card-title( v-bind='titleProps' ) {{ title }}
     v-spacer
     slot( name='items' )
+  slot( name='prefix' )
   v-card-text( v-bind='textProps' )
     slot( name='prepend' )
     v-list( :disabled='busy' v-bind='listProps' )
