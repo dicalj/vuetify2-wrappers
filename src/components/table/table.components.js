@@ -3,6 +3,7 @@ import VwBtn from '../buttons/button'
 import VDatetimeField from '../fields/datetime'
 import VwSearchField from '../fields/search'
 import VwForm from '../form'
+import VwSelectModel from '../fields/select-model'
 import VwToolbarTable from '../toolbars/table'
 
 // vuetify
@@ -16,6 +17,7 @@ export default {
   VwBtn,
   VwForm,
   VwSearchField,
+  VwSelectModel,
   VwToolbarTable,
 
   // customs  
