@@ -15,6 +15,7 @@ v-container( v-bind='containerProps' )
           v-card( v-bind='cardProps' )
             v-card-title( v-bind='titleProps' ) {{ item[itemTitle] }}
             v-card-subtitle( v-bind='subtitleProps' ) {{ item[itemSubtitle] }}
+            slot( name='prefix' )
             v-card-text( v-bind='textProps' ) {{ item[itemText] }}
             v-card-actions( v-bind='actionsProps' )
               slot( name='actions' v-bind='{ item }' )
