@@ -68,6 +68,20 @@ export default {
     },
 
     /**
+     * The empty v-list-item-title text.
+     */
+    emptyTitle: {
+      type: String,
+    },
+
+    /**
+     * The empty v-list-item-subtitle text.
+     */
+    emptySubtitle: {
+      type: String,
+    },
+
+    /**
      * The v-list-item-avatar slot v-icon content.
      */
     itemAvatar: {
