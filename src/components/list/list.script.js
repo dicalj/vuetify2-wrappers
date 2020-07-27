@@ -1,5 +1,14 @@
 //
 export default {
+  computed: {
+
+    /**
+     * 
+     */
+    itemized() {
+      return this.items.length
+    },
+  },
   methods: {
 
     /**
