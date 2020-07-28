@@ -19,7 +19,7 @@ export default {
      * 
      */
     onIcon() {
-      this.drawer = !this.drawer; console.log('click-icon:dashboard')
+      this.drawer = !this.drawer; //console.log('click-icon:dashboard')
     },
   },
   props: {

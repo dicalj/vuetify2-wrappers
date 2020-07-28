@@ -27,7 +27,7 @@ export default {
      * 
      */
     onIcon() {
-      this.$emit('click-icon'); console.log('click-icon:toolbar')
+      this.$emit('click-icon'); //console.log('click-icon:toolbar')
     },
 
     /**
