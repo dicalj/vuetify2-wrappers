@@ -17,7 +17,7 @@ export default {
    * 
    */
   _rules() {
-    return this.fieldProps.rules ? this.fieldProps.rules : []
+    return this.fieldProps ? this.fieldProps.rules ? this.fieldProps.rules : [] : []
   },
 
   /**
