@@ -10,8 +10,13 @@ export default {
    */
   init() {
     if (this.value) {
-      this.date = this.value.split(' ').shift()
-      this.time = this.value.split(' ').pop()
+      if(this.value !== null) {
+        this.date = this.value.split(' ').shift()
+        this.time = this.value.split(' ').pop()
+      } else {
+        this.date = ''
+        this.time = ''
+      }
     } else {
       this.onClickReset()
     }
