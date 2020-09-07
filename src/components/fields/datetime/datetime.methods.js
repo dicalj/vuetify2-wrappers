@@ -10,15 +10,15 @@ export default {
    */
   init() {
     if (this.value) {
+      this.date = this.value.split(' ').shift()
+      this.time = this.value.split(' ').pop()
+    } else {
       if(this.value !== null) {
-        this.date = this.value.split(' ').shift()
-        this.time = this.value.split(' ').pop()
+        this.onClickReset()
       } else {
         this.date = ''
         this.time = ''
       }
-    } else {
-      this.onClickReset()
     }
   },
 
