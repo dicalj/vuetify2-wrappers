@@ -212,6 +212,23 @@ export default {
             },
           },
           {
+            name: 'datetime',
+            type: 'date-time-field',
+            prop: {
+              fieldProps: {
+                label: 'date-time-field reverse',
+              },
+              datePickerProps: {
+                locale: 'es',
+              },
+              timePickerProps: {
+                format: '24hr',
+                locale: 'es',
+              },
+              reverse: true,
+            },
+          },
+          {
             name: 'date',
             type: 'date-field',
             prop: {

@@ -119,6 +119,13 @@ export default {
   },
 
   /**
+   * The reset properties.
+   */
+  reverse: {
+    type: Boolean,
+  },
+
+  /**
    * 
    */
   selectButtonText: {

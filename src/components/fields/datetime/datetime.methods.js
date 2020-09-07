@@ -84,6 +84,10 @@ export default {
    * Update the datetime input.
    */
   updateInput() {
-    this.$emit('input', this.datetime.toLocaleString().split('/').join('-'))
+
+    const date = this.date
+    const time = this.time
+    
+    this.$emit('input', `${date} ${time}`)
   },
 }

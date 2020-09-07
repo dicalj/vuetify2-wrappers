@@ -62,7 +62,11 @@ export default {
    * @return     {string}  { description_of_the_return_value }
    */
   datetime() {
-    return this.value === '' ? '' : `${this.date} ${this.time}`
+
+    const date = this.reverse ? this.date.split('-').reverse().join('-') : this.date
+    const time = this.time
+    
+    return this.value === '' ? '' : `${date} ${time}`
   },
 
   /**
