@@ -7,6 +7,6 @@ import htmlToText from 'html-to-text'
  *
  * @return     {<type>}  { description_of_the_return_value }
  */
-export default (max) => (value) => {
-	return htmlToText.fromString(value).length < max || `Máximo ${max} caracteres.`
+export default (max, options = {}) => (value) => {
+	return htmlToText.fromString(value, options).length < max || `Máximo ${max} caracteres.`
 }
