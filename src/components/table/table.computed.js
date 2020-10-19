@@ -38,8 +38,13 @@ export default {
   /**
    * 
    */
-  filterDataLength() {
-    return Object.values(this.filter.data).filter(this.filterByEmpty).length
+  filterDataLength: {
+    get() {
+      return Object.values(this.filter.data).filter(this.filterByEmpty).length
+    },
+    set() {
+
+    },
   },
 
   /**
