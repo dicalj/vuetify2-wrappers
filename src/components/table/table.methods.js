@@ -55,6 +55,16 @@ export default {
 
   /**
    * 
+   * @param {*} item 
+   */
+  initialize() {
+    this.filter.data = {
+      ...this.filterData,
+    }
+  },
+
+  /**
+   * 
    */
   mapColumn(item) {
     return item.text

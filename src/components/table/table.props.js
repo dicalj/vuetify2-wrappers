@@ -63,6 +63,16 @@ export default {
   },
 
   /**
+   * 
+   */
+  filterData: {
+    type: Object,
+    default: () => ({
+      
+    })
+  },
+
+  /**
    * The filter props.
    */
   filterProps: {
