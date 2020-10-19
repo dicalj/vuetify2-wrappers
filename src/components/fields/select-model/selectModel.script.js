@@ -5,6 +5,27 @@ export default {
     /**
      * 
      */
+    first() {
+      return this.items.slice().shift()
+    },
+
+    /**
+     * 
+     */
+    firstValue() {
+      return this.first ? this.first[this.selectPropsItemValue] : ''
+    },
+
+    /**
+     * 
+     */
+    selectPropsItemValue() {
+      return this.selectProps && this.selectProps.itemValue ? this.selectProps.itemValue : 'value'
+    },
+
+    /**
+     * 
+     */
     _selectProps() {
       return {
         ...this.selectProps,
@@ -77,10 +98,24 @@ export default {
      * 
      */
     setItems(items = []) {
+
+      //
       this.items = items
+
+      //
+      if (this.autoSelectFirst && this.items.length && this._value === '') {
+        this._value = this.firstValue
+      }
     },
   },
   props: {
+
+    /**
+     * 
+     */
+    autoSelectFirst: {
+      type: Boolean,
+    },
 
     /**
      * 
