@@ -20,6 +20,8 @@ export default {
    * Called when the component mounted.
    */
   mounted() {
+    this.clean()
     this.refresh()
+    this.ready()
   },
 }

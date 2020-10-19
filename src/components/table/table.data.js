@@ -3,6 +3,11 @@ export default function data() {
   return {
 
     /**
+     * The mounted flag
+     */
+    already: false,
+
+    /**
      * The busy state.
      */
     busy: false,

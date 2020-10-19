@@ -8,7 +8,7 @@ export default {
    * 
    */
   clean() {
-    this.filter.data = {}
+    this.filter.data = this.filterData
   },
 
   /**
@@ -51,16 +51,6 @@ export default {
    */
   getSelected() {
     return this.selected
-  },
-
-  /**
-   * 
-   * @param {*} item 
-   */
-  initialize() {
-    this.filter.data = {
-      ...this.filterData,
-    }
   },
 
   /**
@@ -259,7 +249,16 @@ export default {
    * Called when updated the options of table.
    */
   onUpdateOptions() {
-    this.refresh()
+    if (this.already) {
+      this.refresh()
+    }
+  },
+
+  /**
+   * 
+   */
+  ready() {
+    this.already = true
   },
 
   /**
