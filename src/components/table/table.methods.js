@@ -34,7 +34,7 @@ export default {
    * 
    */
   filterByEmpty(prop) {
-    return prop != ""
+    return prop !== '' && prop !== null
   },
 
   /**
