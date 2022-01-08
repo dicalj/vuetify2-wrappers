@@ -17,7 +17,12 @@ export default {
    * @return {Promise} the fetch service.
    */
   fetch() {
-    return Promise.resolve(this.params).then(this.mapParams).then(this.service)
+    const filter = this.mapFilter(this.filter.data)
+    const params = {
+      ...this.params,
+      filter,
+    }
+    return Promise.resolve(params).then(this.mapParams).then(this.service)
   },
 
   /**
