@@ -1,8 +1,8 @@
 //
-const DEFAULT_DATE = '2020-01-01'
+const DEFAULT_DATE = new Date(Date.now()).toLocaleDateString('en-GB')
 const DEFAULT_DATE_ICON = 'mdi-calendar'
 const DEFAULT_DATE_FORMAT = 'yyyy-MM-dd'
-const DEFAULT_TIME = '00:00:00'
+const DEFAULT_TIME = new Date(Date.now()).toLocaleTimeString('en-GB')
 const DEFAULT_TIME_ICON = 'mdi-clock'
 const DEFAULT_TIME_FORMAT = 'HH:mm:ss'
 const DEFAULT_DIALOG_WIDTH = 340
